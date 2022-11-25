@@ -1,0 +1,7 @@
+package day09.sub3;
+
+import day09.sub1.Animal;
+
+public class Human extends Animal{
+
+}

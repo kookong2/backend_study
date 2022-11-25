@@ -1,0 +1,12 @@
+content_assist_autoactivation_triggers_java=.qwertyuiopasdfghjklzxcvbnm
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="day09.sub1.Animal"><rhs name\="day09.sub1.Animal"/><rhs name\="day09.sub1.Human"/><rhs name\="day09.sub1.Tiger"/><rhs name\="day09.sub1.Fish"/></lhs><lhs name\="day09.sub1.Human"><rhs name\="day09.sub1.Human"/></lhs><lhs name\="day09.sub1.Tiger"><rhs name\="day09.sub1.Tiger"/></lhs><lhs name\="day09.sub1.Fish"><rhs name\="day09.sub1.Fish"/></lhs><lhs name\="day09.sub2.Calculater"><rhs name\="day09.sub2.SimpleCalculator"/></lhs><lhs name\="day09.sub2.SimpleCalculator"><rhs name\="day09.sub2.SimpleCalculator"/></lhs><lhs name\="day09.sub3.Calculator"><rhs name\="day09.sub3.SimpleCalculator"/></lhs><lhs name\="day09.sub3.SimpleCalculator"><rhs name\="day09.sub3.SimpleCalculator"/></lhs><lhs name\="day10.Calculator"><rhs name\="day10.SimpleCalculator"/></lhs><lhs name\="day10.SimpleCalculator"><rhs name\="day10.SimpleCalculator"/></lhs><lhs name\="day10.sub1.Calculator"><rhs name\="day10.sub1.SimpleCalculator"/></lhs><lhs name\="day10.sub1.SimpleCalculator"><rhs name\="day10.sub1.SimpleCalculator"/></lhs><lhs name\="day10.sub3.Buy"><rhs name\="day10.sub3.Order"/></lhs><lhs name\="day10.sub3.Sell"><rhs name\="day10.sub3.Order"/></lhs><lhs name\="day10.sub3.Order"><rhs name\="day10.sub3.Order"/></lhs><lhs name\="day10.sub4.Calculator"><rhs name\="day10.sub4.SimpleCalculator"/></lhs><lhs name\="day10.sub4.SimpleCalculator"><rhs name\="day10.sub4.SimpleCalculator"/></lhs><lhs name\="day10.sub5.Outer1"><rhs name\="day10.sub5.Outer1"/></lhs><lhs name\="day10.sub5.Outer1$Inner"><rhs name\="day10.sub5.Outer1$Inner"/></lhs><lhs name\="day10.sub5.Outer2$Inner"><rhs name\="day10.sub5.Outer2$Inner"/></lhs></history>
+content_assist_number_of_computers=12
+content_assist_proposals_background=255,255,255
+content_assist_proposals_foreground=0,0,0
+eclipse.preferences.version=1
+org.eclipse.jdt.ui.formatterprofiles.version=22
+smart_semicolon=true
+spelling_locale_initialized=true
+typefilter_migrated_2=true
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="javax.crypto.interfaces.DHPublicKey"/>
+    <fullyQualifiedTypeName name="day09.sub1.Human"/>
+    <fullyQualifiedTypeName name="day09.sub1.Tiger"/>
+    <fullyQualifiedTypeName name="day09.sub1.Fish"/>
+    <fullyQualifiedTypeName name="day09.sub2.Calculater"/>
+    <fullyQualifiedTypeName name="java.security.PublicKey"/>
+    <fullyQualifiedTypeName name="day09.sub2.SimpleCalculator"/>
+    <fullyQualifiedTypeName name="day09.sub3.Calculator"/>
+    <fullyQualifiedTypeName name="day09.sub3.SimpleCalculator"/>
+    <fullyQualifiedTypeName name="day10.Calculator"/>
+    <fullyQualifiedTypeName name="day10.SimpleCalculator"/>
+    <fullyQualifiedTypeName name="javax.sql.rowset.JoinRowSet"/>
+    <fullyQualifiedTypeName name="day09.sub1.Animal"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="javax.naming.directory.AttributeInUseException"/>
+    <fullyQualifiedTypeName name="javax.naming.InterruptedNamingException"/>
+    <fullyQualifiedTypeName name="day10.sub1.SimpleCalculator"/>
+    <fullyQualifiedTypeName name="day10.sub1.Calculator"/>
+    <fullyQualifiedTypeName name="day10.sub3.Buy"/>
+    <fullyQualifiedTypeName name="day10.sub3.Sell"/>
+    <fullyQualifiedTypeName name="day10.sub3.Order"/>
+    <fullyQualifiedTypeName name="javax.swing.DefaultBoundedRangeModel"/>
+    <fullyQualifiedTypeName name="day10.sub4.SimpleCalculator"/>
+    <fullyQualifiedTypeName name="day10.sub4.Calculator"/>
+    <fullyQualifiedTypeName name="day10.sub4.Calculator2"/>
+    <fullyQualifiedTypeName name="java.lang.Iterable"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="day10.sub5.Outer1"/>
+    <fullyQualifiedTypeName name="day10.sub5.Outer1.Inner"/>
+    <fullyQualifiedTypeName name="day10.sub5.Outer2"/>
+    <fullyQualifiedTypeName name="day10.sub5.Outer2.Inner"/>
+    <fullyQualifiedTypeName name="java.lang.Runnable"/>
+</qualifiedTypeNameHistroy>

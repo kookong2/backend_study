@@ -1,0 +1,5 @@
+package day09.sub1;
+
+public class Tiger extends Animal{
+	
+}

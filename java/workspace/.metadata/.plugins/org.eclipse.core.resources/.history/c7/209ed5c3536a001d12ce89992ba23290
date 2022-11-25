@@ -1,0 +1,28 @@
+package day09.sub1;
+
+public class Ex02 {
+
+	public static void main(String[] args) {
+		Human[] humans = {new Human(), new Human()};
+		
+		Tiger[] tigers = {new Tiger(), new Tiger()};
+		
+		for(Human human : humans) {
+			human.move();
+		}
+		for(Tiger tiger : tigers) {
+			tiger.move();
+		}
+		
+		/**
+		Human human = new Human();
+		human.move();
+		
+		Tiger tiger = new Tiger();
+		tiger.move();
+		**/
+		
+
+	}
+
+}

@@ -1,0 +1,9 @@
+package day10.sub3;
+
+public interface Sell {
+	void sell();
+	
+	default void Order() {
+		System.out.println("주문!");
+	}
+}

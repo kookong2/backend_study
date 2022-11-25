@@ -1,0 +1,5 @@
+package day10.sub4;
+
+public interface Calculator {
+
+}

@@ -1,0 +1,7 @@
+package day09.sub3;
+
+public final class Animal {
+	public void move() {
+		System.out.println("움직인다!");
+	}
+}

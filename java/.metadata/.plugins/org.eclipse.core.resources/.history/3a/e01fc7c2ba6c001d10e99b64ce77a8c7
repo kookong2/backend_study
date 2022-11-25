@@ -1,0 +1,9 @@
+package day12.sub1;
+
+public class Ex01 {
+	public static void main(String[] args) {
+		MemberLogin memberLogin = new MemberLogin();
+		
+		memberLogin.login("user02", "2345");
+	}
+}

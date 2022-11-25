@@ -11,6 +11,9 @@ public class Ex01 {
 			System.out.println("실행되는 부분!");
 			
 		}catch (FileNotFoundException e) {	// FileNotFoundException e = new FileNotFoundException(...);
+			// IOException e = new FileNotFoundException(...);
+			// Exception e = new FileNotFoundException(...);
+			// Throwable e = new FileNotFoundExceoption(...);
 			System.out.println("예외 발생!");
 		}
 		System.out.println("실행!");

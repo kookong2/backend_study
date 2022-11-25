@@ -30,7 +30,56 @@ try{
 } catch (발생한 예외 객체){
 	// 예외가 발생하면 유입되는 구간
 		- 발생시에 적절한 조치
+}finally{
+	// 예외가 발생하든 발생하지 않든, 항상 실행되는 구간
 }
+
+trace - 추적
+stack - 쌓다
+
+오류 찾기 메서드
+	getMessage();
+	printStackTrace();
+
+4. try-with-resources
+	- AutoCloseable 인터페이스 : close()
+try{
+
+}catch{
+
+}finally{
+	// resources 해제
+	// 로그 기록
+}
+	
+
+5. 예외처리 미루기
+	예외 전가 : 예외가 발생할 수 있는 메서드를 호출하는 쪽에서 예외 처리 전가
+	throws : 전가 시킬 예외 클래스
+		- Exception (컴파일 시 체크되는 예외에서 반드시 써야 하는 키워드)
+	참고) RuntimeException 하위 예외 -> Throws 생략 가능 ( 유연한 예외 처리)
+
+6. 다중 예외 처리
+
+7. 사용자 정의 예외
+	회원 아이디 중복 : DuplicateMemberIDException
+
+로그인 기능 - 회원 아이디, 회원 비밀번호
+	- 아이디가 가입된 회원인지 체크	
+		- MemberNotFoundException
+	- 비밀번호 일치 체크
+		- PasswordIncorrectException
+
+
+
+
+
+
+
+
+
+
+
 
 
 

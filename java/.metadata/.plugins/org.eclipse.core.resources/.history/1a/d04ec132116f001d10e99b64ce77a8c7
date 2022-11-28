@@ -1,0 +1,14 @@
+package day13.sub1;
+
+import java.beans.JavaBean;
+
+public class Ex06 {
+	public static void main(String[] args) {
+		
+		
+	}
+	
+	public static void fruits(String...fruits) {
+		System.out.println(java.util.Arrays.toString(fruits));
+	}
+}

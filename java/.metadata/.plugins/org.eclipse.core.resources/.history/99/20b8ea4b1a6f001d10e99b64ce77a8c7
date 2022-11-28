@@ -1,0 +1,8 @@
+package day13.sub2;
+
+public class Ex05 {
+	public static void main(String[] args) {
+		Integer num1 = new Integer(10);
+		double num2 = num1.doubleValue();
+	}
+}

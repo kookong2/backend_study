@@ -1,0 +1,112 @@
+java.lnag 패키지
+
+1. Object 클래스
+	- 모든 클래스의 상위 클래스
+	- extends Object를 컴파일러가 자동 추가해줌
+
+2. Object 클래스의 equals(), hashCode()
+
+- equals()
+    public boolean equals(Object obj) {
+        return (this == obj); 	// 객체의 참조 주소 비교(객체의 힙메모리의 물리적 위치 일치)
+    }
+	this ? - 자신 객체
+
+	Object obj - 비교 대상 객체
+
+
+- Class getClass()
+	- 클래스의 정보
+- hashCode() : 인스턴스의 주소
+	hash -> 검색
+- toString() : 객체를 출력하면 자동으로 호출되는 메서드
+
+public String toString() {
+        return getClass().getName() + "@" + Integer.toHexString(hashCode());
+    }
+- 클래스 명 + 객체 주소 = toString()
+
+Class getClass()
+	- 클래스의 정보
+		- getName() : 패키지명을 포함한 클래스 명
+Object
+	-String toString()
+	- boolean equals() // 물리적 동일성
+	- int hashCode() // 물리적 위치
+String
+	-String toString()
+	- boolean equals() // 논리적 동일성
+	- int hashCode() // 논리적 동일성
+
+논리적 동일성
+	- equals(), hashCode()
+	
+java.utils.Objects : Object 클래스 편의 기능
+	hash
+java.utils.Arrays : 배열 편의 기능
+
+... -> 가변 매개변수
+	
+3. String 클래스
+	- 선언하는 방법 두 가지
+	String str = new String("abc");
+
+	String str = "abc"
+
+	- 문자열 불변
+	문자열
+		private final byte[] value
+		
+		변경 불가 -> 문자열 객체 변경 불가 x
+		
+		+ 연산자 : 문자열 결합
+			- 문자열을 결합 할때마다 새로운 문자열 객체 생성 -> 메모리 낭비(성능 저하)
+
+4. StringBuffer, StringBuilder
+
+byte[] value = new byte[16];
+
+wrapper 클래스
+	- 기본 자료형을 감싼 클래스
+	byte - Byte
+	short - Short
+	int - Int
+	long - Long
+
+	char - Character
+	boolean - Boolean
+
+	float - Float
+	double - Double
+
+class Integer{
+	...
+
+	final int value;
+
+	...
+}
+
+Class 클래스
+
+parse -> 원래 자료형으로 변환
+format -> 특정 형식으로 문자열 변환
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

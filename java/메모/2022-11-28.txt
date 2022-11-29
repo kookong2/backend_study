@@ -97,8 +97,7 @@ Class 클래스
 Class
 	.forName
 
-parse -> 원래 자료형으로 변환
-format -> 특정 형식으로 문자열 변환
+
 
 
 

@@ -70,7 +70,7 @@ wrapper 클래스
 	- 기본 자료형을 감싼 클래스
 	byte - Byte
 	short - Short
-	int - Int
+	int - Integer
 	long - Long
 
 	char - Character
@@ -88,6 +88,14 @@ class Integer{
 }
 
 Class 클래스
+	- 클래스의 정보
+	- 클래스로더 -> 클래스 -> 클래스 정보(Class)
+	- 모든 클래스의 정적 변수로 Class class
+	- 기본적으로 클래스 로더 -> 데이터 영역 로딩, class
+동적 로딩
+	- 실행 중에 동적으로 클래스 -> 데이터 영역
+Class
+	.forName
 
 parse -> 원래 자료형으로 변환
 format -> 특정 형식으로 문자열 변환

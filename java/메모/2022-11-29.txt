@@ -1,0 +1,31 @@
+java.lang.Math
+	- static ceil() : 올림
+	- static floor() : 버림
+	- static round() : 반올림
+	
+	- abs() 절대값 : 음수 -> 양수
+	- random() : 임의 수 -> 0이상 1미만
+
+java.util.StringTokenizer
+	 
+형식화 클래스
+java.text 패키지
+
+1. DecimalFormat
+	- 숫자 -> 특정 형식의 문자열로 변환
+
+2. SimpleDateFormat
+	
+3. ChoiceFormat
+
+4. MessageFormat
+
+
+.format -> 형식화
+.parse -> 형식화 문자열 -> 원래 형태
+
+Locale -> 지역화와 관련 클래스
+	국가 - 언어, 통화, 숫자 표기
+
+날짜와 시간
+Calendar와 Date

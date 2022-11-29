@@ -1,0 +1,16 @@
+package day14.sub3;
+
+import java.text.DecimalFormat;
+
+public class Ex01 {
+	public static void main(String[] args) {
+		
+		String pattern = "0,000.00";
+		
+		DecimalFormat df = new DecimalFormat(pattern);
+		
+		long num = 1000000000L;
+		String strNum1 = df.format(num);
+		System.out.println(strNum1);
+	}
+}

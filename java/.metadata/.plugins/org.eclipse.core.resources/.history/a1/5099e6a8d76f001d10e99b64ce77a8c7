@@ -1,0 +1,25 @@
+package day14.sub1;
+
+import java.lang.reflect.*;
+
+public class Ex01 {
+	public static void main(String[] args) {
+		
+		Person person = new Person("이름1", 30);
+		
+		Class cls = person.getClass();
+		
+		//System.out.println(clsClass.getName());
+		
+		//멤버 변수
+		Field[] fields = cls.getFields();
+		for(Field field : fields) {
+			System.out.println(field);
+		}
+		
+		Method[] methods = cls.getMethods();
+		for(Method method : methods) {
+			System.out.println(method);
+		}
+	}
+}

@@ -1,0 +1,12 @@
+package day14.sub1;
+
+public class Ex01 {
+	public static void main(String[] args) {
+		
+		Person person = new Person("이름1", 30);
+		
+		Class clsClass = person.getClass();
+		
+		System.out.println(clsClass.getName());
+	}
+}

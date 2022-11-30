@@ -39,7 +39,11 @@ Calendar와 Date
 Calender 1.1
 	- 추상 클래스, 생성자 protected -> 외부에서 객체 생성 x
 	- 달력 체계가 다른 국가, 내부에서 지역에 맞는 달력 객체 생성자
-	- static getInstance() -> Calender 객체
+	- static getInstance() -> Calender 객체 : 현재 시간
+	- set 메서드 -> 날짜와 시간을 지정
+	- get 메서드 -> 날짜와 시간을 조회
+	- add 메서드 -> (roll)
+
 
 
 

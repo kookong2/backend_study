@@ -13,8 +13,5 @@ public class Ex02 {
 		LocalDateTime lt2 = time.atDate(date);
 		
 		LocalDateTime lt3 = LocalDateTime.of(date, time);
-		
-		ZonedDateTime zdt1 = lt3.atZone(ZoneId.of("Asia/Seoul"));
-		OffsetDateTime odt = lt3.atOffset(ZoneOffset.of("+9"));
 	}
 }

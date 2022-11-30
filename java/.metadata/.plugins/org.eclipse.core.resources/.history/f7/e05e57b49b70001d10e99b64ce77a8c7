@@ -1,0 +1,13 @@
+package day15;
+
+import java.text.*;
+import java.util.regex.Pattern;
+
+public class Ex03 {
+	public static void main(String[] args) {
+		
+		String pattern = "이름 : {0}"
+		
+		MessageFormat mf = new MessageFormat(pattern);
+	}
+}

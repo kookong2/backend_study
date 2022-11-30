@@ -1,0 +1,13 @@
+package day15;
+
+import java.text.*;
+
+public class Ex02 {
+	public static void main(String[] args) {
+		
+		int[] limits = {60, 70, 80, 90};
+		String[] patterns = {"D", "C", "B", "A"};
+		
+		ChoiceFormat cf = new ChoiceFormat(limits, patterns);
+	}
+}

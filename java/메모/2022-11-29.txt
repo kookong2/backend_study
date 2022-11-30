@@ -15,7 +15,14 @@ java.text 패키지
 	- 숫자 -> 특정 형식의 문자열로 변환
 
 2. SimpleDateFormat
-	
+	y - yyyy 년도
+	M - MM 월
+	d - dd 일
+
+	H - HH 시(0~23),	h - hh 시(0~11),	a - AM,PM,	E - 요일
+	m - mm 분(0~59)
+	s - ss초(0~59)
+
 3. ChoiceFormat
 
 4. MessageFormat
@@ -29,3 +36,21 @@ Locale -> 지역화와 관련 클래스
 
 날짜와 시간
 Calendar와 Date
+Calender 1.1
+	- 추상 클래스, 생성자 protected -> 외부에서 객체 생성 x
+	- 달력 체계가 다른 국가, 내부에서 지역에 맞는 달력 객체 생성자
+	- static getInstance() -> Calender 객체
+
+
+
+
+
+
+
+
+
+
+
+
+
+

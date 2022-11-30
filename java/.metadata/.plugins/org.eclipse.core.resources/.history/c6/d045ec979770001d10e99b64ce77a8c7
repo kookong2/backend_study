@@ -1,0 +1,18 @@
+package day15;
+
+import java.util.Date;
+import java.text.SimpleDateFormat;
+
+public class Ex01 {
+	public static void main(String[] args) {
+		
+		Date date = new Date();
+		System.out.println(date);
+		
+		String pattern = "yyyy-MM-dd HH:mm:ss";
+		SimpleDateFormat sdf = new SimpleDateFormat(pattern);
+		String dateStr = sdf.format(date);
+		System.out.println(dateStr);
+		
+	}
+}

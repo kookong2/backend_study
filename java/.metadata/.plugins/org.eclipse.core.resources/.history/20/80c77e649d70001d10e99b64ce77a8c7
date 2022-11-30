@@ -1,0 +1,21 @@
+package day15;
+
+import java.util.*;
+import java.text.*;
+import java.io.*;
+
+public class Ex04 {
+	public static void main(String[] args) throws IOException , ParseException{
+		
+		String pattern = "이름 : {0}, 전화번호 : {1}";
+		
+		MessageFormat mf = new MessageFormat(pattern);
+		Scanner scanner = new Scanner(new File("persons.txt"));
+		
+		while (scanner.hasNext()) {
+			String str = scanner.nextLine();
+			Object[] data = mf.parse(str);
+			System.out.println(Arrays.toString(data));
+		}
+	}
+}

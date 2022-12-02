@@ -97,6 +97,14 @@
 	- 중복을 체크하는 기준
 		- equals()
 		- hashcode()
+
+4. Map 인터페이스
+	- 키, 값의 쌍
+
+	- HashMap
+	- TreeMap
+
+		put("키", "값")
 	
 
 

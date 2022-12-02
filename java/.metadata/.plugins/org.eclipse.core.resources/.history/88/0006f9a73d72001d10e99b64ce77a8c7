@@ -1,0 +1,12 @@
+package day17.sub1;
+
+import java.util.HashSet;
+
+public class Ex02 {
+	public static void main(String[] args) {
+		
+		HashSet<Book> library = new HashSet<Book>();
+		
+		library.add()
+	}
+}

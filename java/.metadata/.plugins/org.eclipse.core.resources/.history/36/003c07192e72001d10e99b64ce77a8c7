@@ -1,0 +1,18 @@
+package day17;
+
+import java.util.Arrays;
+
+public class Ex02 {
+	public static void main(String[] args) {
+		
+		String[] names = new String[] {"이름1", "이름2","이름3","이름4","이름5"};
+		String[] newNames = new String[4];
+		
+		String[] part1 = Arrays.copyOfRange(newNames, 0, 1);
+		String[] part2 = Arrays.copyOfRange(newNames, 3, 4);
+		
+		System.out.println(Arrays.toString(part1));
+		System.out.println(Arrays.toString(part2));
+		
+	}
+}

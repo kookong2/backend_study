@@ -1,0 +1,120 @@
+1. 컬랙션 프레임 워크란?
+	- 컬렉션 (Collection)
+		: 데이터 군
+
+	- 프레임 워크 (Framework)
+		: 표준화된 설계 (자료구조)
+
+	- Collection
+		- Iterator 
+			- 반복자 : 반복 로직도 표준화
+		- List : 순차 자료 구조
+			- 순서가 유지되는 자료
+			- 인덱스 번호
+			- 구현 클래스
+				- ArrayList, LinkedList, Vector
+			- 추가 : add()
+			- 조회 : get(인덱스 번호)
+			- 제거 : remove(인덱스 번호)
+			- 포함 여부 : contains(요소)
+
+		- Set : 집합 자료 구조
+			- 중복 허용 X
+			- 순서가 유지되지 않는 자료
+			- 구현 클래스
+				- HashSet, TreeSet
+			- 추가 : add()
+			- 조회 : get(인덱스 번호)
+			- 제거 : remove()
+			- 포함 여부 : contains(요소)
+
+	- Map : Diction 자료 구조
+		- 키, 값의 쌍
+		
+		- 키 : 중복 x (Set : 집합 자료 구조)
+		- 값 : 중복 x
+		- 순서 유지 x
+		- 구현 클래스
+			- HashMap, TreeMap, Hashtable, Properties
+		- 추가 : put(키, 값)
+		- 조회 :
+		- 제거 : remove(키)
+		- 포함 여부 : containsKey, containsValue
+
+2. 컬렉션 프레임 워크의 핵심 인터페이스
+
+3. List 인터페이스
+	- ArrayList
+		- 배열을 구현한 자료 구조
+	Object[] elementData = new Object[10];
+	
+	- 물리적 메모리에 순차적으로 등록
+	- 데이터의 조회가 빠르다.
+	- 데이터 변경 x -> 새로운 배열 생성
+	- 데이터 추가, 삭제시 메모리를 많이 사용하므로 불리.
+
+	- ArrayList 기본 용량 10
+		- 배열의 크기를 넘어서게 되면 현재 용량 2배로 늘린다.
+
+	- 반복 작업의 표준화 : Iterator
+		- iterator()
+			- hasNext() : 다음 요소가 있는지?
+			- next() : 다음 요소를 조회
+			
+		- 반복이 완료되면 끝 (다시 반복 x)
+		- 다시 반복하려면 다시 Iterator 객체 생성
+		
+		ListIterator : List 인터페이스 구현 클래스
+			- hasNext();
+			- next();
+			- hasPrevious() : 이전 요소가 있는지?
+			- previous : 이전 요소 조회
+
+		LinkedList
+			- 각 요소가 다음 연결 요소의 주소를 가짐
+			- 데이터 추가, 삭제 -> 다음 요소의 주소만 변경
+			- ArrayList와 달리 새로운 배열 x -> 메모리 소비가 적음
+
+			- 데이터 논리적으로 연결 -> 조회시 불리
+			
+			- Queue
+				- offer() : 뒤에서 추가
+				- poll() : 앞에서 꺼내기
+			
+			- Stack
+				- push() : 가장 위에 추가
+				- pop() : 가장 위에서 꺼내기
+				
+			- indexOf
+			- lastIndexOf
+
+3. Set 인터페이스
+	- 중복 x
+	- 순서 x
+	- HashSet
+	- TreeSet
+
+	- 중복을 체크하는 기준
+		- equals()
+		- hashcode()
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+

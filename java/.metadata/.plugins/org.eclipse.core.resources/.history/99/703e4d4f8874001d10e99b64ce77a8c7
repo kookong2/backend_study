@@ -1,0 +1,26 @@
+package day18;
+
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class Ex02 {
+	public static void main(String[] args) {
+		
+		HashMap<String, String> members = new HashMap<String,String>();
+		
+		members.put("user01", "123456");
+		members.put("user02", "234567");
+		members.put("user03", "123456");
+		members.put("user04", "234567");
+		
+		Scanner scanner = new Scanner(System.in);
+		while(true) {
+			System.out.print("아이디 : ");
+			String userId = scanner.nextLine();
+			System.out.print("비밀 번호 : ");
+			String userPass = scanner.nextLine();
+			
+			
+		}
+	}
+}

@@ -99,12 +99,35 @@
 		- hashcode()
 
 4. Map 인터페이스
-	- 키, 값의 쌍
-
+	- 키, 값의 쌍 (키 중복 x) -> Set 자료형, (값 중복 o)
 	- HashMap
 	- TreeMap
+		- HashSet + 정렬(이진트리)
+		- 이진 검색트리 -> 노드를 지날 때 마다 검색 범위가 1/2
+		- 검색 시 빠른 이점
+		- 데이터 추가, 삭제, 수정 -> 이진 트리 생성(성능 저하)
 
-		put("키", "값")
+		- 정렬의 기준
+			- java.lang.Comparable 인터페이스
+				- public int compareTo
+					- 정렬 -> 오름차순 , 내림차순
+			- java.util.Comparator
+				- public int compare
+
+		- put("키", "값")
+		- put으로 값을 추가, 수정
+	- interface Map.Entry
+		-> 키, 값을 담은 객체
+	- Map.Entry[]table
+
+5. Arrays
+	(java.util)
+	- 배열에 부가적인 유용한 기능
+
+6. Collections
+	(java.util)
+	- Collection 에 부가적인 유용한 기능
+	
 	
 
 

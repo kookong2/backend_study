@@ -32,14 +32,27 @@ public class Ex02 extends JFrame{
 		new Ex02();
 	}
 
+	@Override
+	public void keyTyped(KeyEvent e) {
+		int code = e.getKeyCode();
+		String key = KeyEvent.getKeyText(code);
+		System.out.println("code = " + code + ", key = " + key);
+		
+	}
+
+	@Override
+	public void keyPressed(KeyEvent e) {
+		System.out.println("KeyPressed");
+		
+	}
+
+	@Override
+	public void keyReleased(KeyEvent e) {
+		System.out.println("KeyReleased");
+		
+	}
 	
 	class KeyEventHanle extends KeyAdapter{
-		@Override
-		public void keyPressed(KeyEvent e) {
-			int code = e.getKeyCode();
-			String key = KeyEvent.getKeyText(code);
-			System.out.println("code = " + code + ", key = " + key);
-			
-		}
+		
 	}
 }

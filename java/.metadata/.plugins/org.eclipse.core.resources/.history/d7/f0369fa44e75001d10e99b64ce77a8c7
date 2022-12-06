@@ -1,0 +1,17 @@
+package day19;
+
+import javax.swing.JFrame;
+
+public class Ex02 extends JFrame{
+	
+	public Ex02() {
+		super("연습02");
+		
+		
+	}
+	
+	public static void main(String[] args) {
+		
+		
+	}
+}

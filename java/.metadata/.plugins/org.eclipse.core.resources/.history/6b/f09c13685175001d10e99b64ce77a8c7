@@ -1,0 +1,17 @@
+package day19;
+
+import javax.swing.JFrame;
+
+public class Ex03 extends JFrame{
+
+	public Ex03() {
+		super("로그인");
+		setVisible(true);
+		setSize(300,400);
+		
+	}
+	
+	public static void main(String[] args) {
+		
+	}
+}

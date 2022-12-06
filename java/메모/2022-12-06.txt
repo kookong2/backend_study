@@ -1,0 +1,48 @@
+사용자 인터페이스
+1. 스윙
+	
+2. 스윙의 클래스 구조
+
+3. 프레임 : JFrame
+	- 최종 컨테이너
+
+4. 패널 : JPanel
+	- 중간 컨테이너
+
+5. JLabel
+	- 텍스트를 단순히 출력
+
+6. JTextField
+	- 텍스트를 입력 받을 때(한줄 씩)
+
+7. TextArea
+	- 여러 줄 텍스트를 입력 받을 때
+
+8. JPasswordField
+	- 비밀번호를 입력 받을 때(**)
+	
+	- setText : 입력 텍스트를 지정할 때
+	- getText : 입력 텍스트 가져올 때
+
+9. 버튼
+	1) JButton
+
+	2) JCheckBox
+
+	3) JRaioButton
+
+	4) ButtonGroup
+
+
+10. JComboBox
+
+11. JScrollPane
+
+12. JTable
+
+13. 메뉴 - JMenuBar, JMenu, JMenuItem
+
+14. 스윙 레이아웃
+	- FlowLayout
+	- Border Layout
+	- GridLayout

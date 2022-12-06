@@ -1,0 +1,43 @@
+package day19;
+
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+public class Ex02 extends JFrame{
+	
+	public Ex02() {
+		super("연습02");
+		setVisible(true);	// 창 보이기
+		setSize(300,400);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		
+		// FlowLayout -> 흐르듯이 배치
+		// setLayout
+//		FlowLayout layout = new FlowLayout(FlowLayout.RIGHT);
+//		setLayout(layout);
+		
+		// and(Component c)
+//		for(int i = 0; i < 6; i++) {
+//			add(new JButton("버튼" + i));
+//		}
+		
+		//BorderLayout - 동서남북, 가운데
+		BorderLayout layout = new BorderLayout();
+		setLayout(layout);
+		
+		add("NORTH", new JButton("북"));
+		add("SOUTH", new JButton("남"));
+		add("WEST", new JButton("서"));
+		add("EAST", new JButton("동"));
+		add("CENTER", new JButton("가운데"));
+		
+	}
+	
+	public static void main(String[] args) {
+		new Ex02();
+		
+	}
+}

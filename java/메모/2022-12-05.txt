@@ -1,7 +1,0 @@
-1. Arrays
-	(java.util)
-	- 배열에 부가적인 유용한 기능
-
-2. Collections
-	(java.util)
-	- Collection 에 부가적인 유용한 기능

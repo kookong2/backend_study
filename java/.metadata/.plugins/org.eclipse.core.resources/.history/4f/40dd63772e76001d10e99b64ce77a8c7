@@ -1,0 +1,12 @@
+package day20.sub2;
+
+public class Ex01 {
+	public static void main(String[] args) {
+
+		Transportation bus2 = Transportation.BUS;
+		
+		if(Transportation.BUS == bus2) {
+			System.out.println("버스");
+		}
+	}
+}

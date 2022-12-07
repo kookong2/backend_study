@@ -1,0 +1,16 @@
+package day20.sub1;
+
+import java.util.List;
+
+import day20.Box;
+import day20.Fruit;
+
+public class Jucier {
+	public static void make(Apple<? extends Fruit>fruitBox) {	// 컴파일 되면 FruitBox<Fruit>
+
+		List<?> fruits = fruitBox.getContents();
+		System.out.println(fruits.get(0).toString()+ " " + fruits.size() + "개로 주스 만듦!");
+
+		
+	}
+}

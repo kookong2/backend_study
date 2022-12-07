@@ -1,0 +1,10 @@
+package day20;
+
+import java.util.List;
+
+public class jucier {
+	public static void make(FruitBox<Apple>appleBox) {
+		
+		List<Apple> apples = appleBox.getContents();
+	}
+}

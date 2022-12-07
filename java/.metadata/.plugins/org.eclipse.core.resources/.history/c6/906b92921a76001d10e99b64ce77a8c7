@@ -1,0 +1,26 @@
+package day20;
+
+import java.util.ArrayList;
+
+public class Ex02 {
+	public static void main(String[] args) {
+		
+		ArrayList fruits = new ArrayList();
+		fruits.add("사과");
+		fruits.add("오렌지");
+		fruits.add("포도");
+		fruits.add("멜론");
+		fruits.add(1);
+		fruits.add(2);
+		
+		for(Object fruit : fruits) {
+			if(fruit instanceof String) {
+				String _fruit = (String)fruit;
+				System.out.println(_fruit);
+				
+			}else {
+				int num = (Integer)fruits;
+			}
+		}
+	}
+}

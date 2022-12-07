@@ -1,0 +1,17 @@
+package day20;
+
+import java.util.List;
+
+public class jucier {
+	public static void make(FruitBox<Apple>appleBox) {	// 컴파일 되면 FruitBox<Fruit>
+		
+		List<Apple> apples = appleBox.getContents();
+		System.out.println("사과" + apples.size() + "개로 주스 만듦!");
+	
+	}
+	
+	public static void make(FruitBox<Melon> melonBox) {	// 컴파일 되면 FruitBox<Fruit>
+		List<Melon> melons = melonBox.getContents();
+		System.out.println("멜론" + melons.size() + "개로 주스 만듦!");
+	}
+}

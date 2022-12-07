@@ -1,0 +1,24 @@
+package day20;
+
+import java.awt.FlowLayout;
+
+import javax.swing.JFrame;
+
+public class Ex01 extends JFrame{
+	
+	public Ex01() {
+		super("연습01");
+		setVisible(true);
+		setSize(500,600);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		
+		setLayout(new FlowLayout());
+		
+		
+	}
+	
+	public static void main(String[] args) {
+		
+		
+	}
+}

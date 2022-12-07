@@ -1,0 +1,10 @@
+package day20;
+
+public class Ex03 {
+	public static void main(String[] args) {
+		
+		Box<Apple> appleBox = new Box<Apple>();
+		appleBox.add(new Apple());
+		appleBox.add(new Apple());	// 다른 것은 못 담음
+	}
+}

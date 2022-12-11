@@ -1,7 +1,0 @@
-package day10;
-
-public final class Animal {
-
-	<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/visit.css">
-	
-}

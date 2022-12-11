@@ -1,5 +1,0 @@
-package day09.sub2;
-
-public abstract class Calculater {
-	public abstract int add(int num1, int num2);
-}

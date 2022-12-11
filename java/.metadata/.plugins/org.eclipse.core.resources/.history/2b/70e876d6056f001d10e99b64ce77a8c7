@@ -1,9 +1,0 @@
-package day13;
-
-public class Ex02 {
-	public static void main(String[] args) {
-		Student st = new MiddleSchoolStudent();
-		
-		String nameString = "학생";
-	}
-}

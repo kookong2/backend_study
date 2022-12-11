@@ -1,9 +1,0 @@
-package day14;
-
-public class Ex02 {
-	public static void main(String[] args) {
-		
-		String str1 = "abc";
-		String str2 = "abc";
-	}
-}

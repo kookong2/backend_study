@@ -1,7 +1,0 @@
-package day12.sub1;
-
-public class PasswordIncorrectException extends Exception{
-	public PasswordIncorrectException(String message) {
-		super(message);
-	}
-}

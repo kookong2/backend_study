@@ -1,0 +1,14 @@
+package day20.sub2;
+
+public enum Transportation {
+	BUS("버스"), 	// 객체1			
+	SUBWAY("지하철"), // 객체2
+	TAXI("택시");	// 객체3
+
+	private String name;
+	
+	Transportation(String name) {
+		
+		
+	}
+}

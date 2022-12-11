@@ -1,20 +1,19 @@
 package day20.sub2;
 
+import static day20.sub2.Transportation.*;
+
 public class Ex01 {
 	public static void main(String[] args) {
 
-		Transportation trans = Transportation.SUBWAY;
+		Transportation trans = BUS;	// trans == BUS -> 주소 값이 똑같음 
 
-		switch(trans) {
-		case BUS:
+		if(trans == BUS) {
 			System.out.println("버스");
-			break;
-		case SUBWAY:
-			System.out.println("지하철");
-			break;
-		case TAXI:
-			System.out.println("택시");
-			break;
 		}
+		
+		String name = BUS.getName();
+		System.out.println(name);
+		
+		//Transportation AIRPLANE = new Tranportaion("비행기");
 	}
 }

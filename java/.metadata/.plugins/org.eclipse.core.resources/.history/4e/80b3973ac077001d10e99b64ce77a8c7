@@ -1,0 +1,14 @@
+package day22.sub1;
+
+public class Ex04 {
+	public static void main(String[] args) {
+		
+		ThreadGroup grp1 = new ThreadGroup("group1");
+		ThreadGroup grp2 = new ThreadGroup("group2");
+		ThreadGroup grp3 = new ThreadGroup("group3");
+		
+		Thread th1 = new Thread();
+		Thread th2 = new Thread();
+		Thread th3 = new Thread();
+	}
+}

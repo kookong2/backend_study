@@ -1,0 +1,14 @@
+package day22;
+
+@MyAnno
+public class Ex01 {
+	
+	@MyAnno
+	int num;
+	
+	@MyAnno
+	public static void main(String[] args) {
+		
+		
+	}
+}

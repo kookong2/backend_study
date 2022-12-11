@@ -1,0 +1,24 @@
+package day20.sub2;
+
+public class Ex01 {
+	public static void main(String[] args) {
+
+		Transportation trans = Transportation.BUS;	// trans == BUS -> 주소 값이 똑같음 
+
+		if(trans == Transportation.BUS) {
+			System.out.println("버스");
+		}
+		
+		switch(trans) {
+		case BUS:
+			System.out.println("버스");
+			break;
+		case SUBWAY:
+			System.out.println("지하철");
+			break;
+		case TAXI:
+			System.out.println("택시");
+			break;
+		}
+	}
+}

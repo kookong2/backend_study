@@ -1,0 +1,14 @@
+package day22;
+
+@MyAnno	// value() - 값1
+public class Ex01 {
+	
+	@MyAnno
+	int num;
+	
+	@MyAnno
+	public static void main(@MyAnno("값") String[] args) {
+		
+		
+	}
+}

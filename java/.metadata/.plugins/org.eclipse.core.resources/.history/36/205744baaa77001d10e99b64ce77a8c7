@@ -1,0 +1,19 @@
+package day20.sub2;
+
+public enum Transportation {
+	BUS("버스"), 	// 객체1			// public static final Transportaion Bus = new Transportaion ...
+	SUBWAY("지하철"), // 객체2
+	TAXI("택시");	// 객체3
+
+	private String name;
+	
+	Transportation(String name) {
+		
+		
+	}
+	
+	public String getName() {
+		
+		return name;
+	}
+}

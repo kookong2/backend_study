@@ -1,0 +1,13 @@
+package day22.sub1;
+
+import javax.swing.JOptionPane;
+
+public class Ex01 {
+	public static void main(String[] args) {
+		
+		System.out.println("1번째 작업");
+		System.out.println("2번째 작업");
+		
+		System.out.println("작업 끝");
+	}
+}

@@ -1,0 +1,30 @@
+package day22.sub1;
+
+import java.security.PublicKey;
+
+public class Ex01 {
+	public static void main(String[] args) {
+		ThreadEx2_1 th1 = new ThreadEx2_1();
+		Thread th2 = new Thread(new ThreadEx2_1());
+		th1.run();
+		th2.run();
+	}
+	
+	class ThreadEx2_1 extends Thread{
+		
+		public void run() {
+			for(int i = 1; i <= 10; i++) {
+				System.out.println(i + "-" + getName());
+			}
+		}
+	}
+	
+	class ThreadEx2_2 implements Runnable{
+		public void run() {
+			for(int i = 1; i < 10; i++) {
+				Thread th = Thread.currentThread();
+				System.out.println(i + "-" + th.getName());
+			}
+		}
+	}
+}

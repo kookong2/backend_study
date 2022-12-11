@@ -1,0 +1,14 @@
+package day22;
+
+@MyAnno
+public class Ex01 {
+	
+	@MyAnno("값")
+	int num;
+	
+	@MyAnno("값")
+	public static void main(@MyAnno("값") String[] args) {
+		
+		
+	}
+}

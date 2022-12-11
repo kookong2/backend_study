@@ -1,0 +1,7 @@
+package day20.sub2;
+
+public enum Transportation {
+	BUS, 	// 객체1			
+	SUBWAY, // 객체2
+	TAXI	// 객체3
+}

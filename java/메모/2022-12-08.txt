@@ -1,16 +1,47 @@
 열거형
 1. 열거형이란?
-
+	Enum 클래스
+		- 상수만을 위한 클래스
 2. 열거형 정의와 사용
 
 3. 열거형에 멤버 추가하기
 
 4. 열거형에 추상 메서드 추가하기
-
+	
 어노테이션
 
 1. 어노테이션이란?
+	- 주석, 주해, 설명 -> 정보 제공 (기능 x)
+	- java.lang.annotation
+		- implement java.lang.annotation.Annotation
 
 2. 표준 어노테이션
+	- @Override
+		- 현재 메서드가 재정의 된 메서드
+		- 컴파일러에게 정보 전달
+		- 컴파일러가 상위 클래스에 동일 메서드가 있는지 체크
+	- @Deprecated 
+	- @FunctionalInterface
 
 3. 메타 어노테이션
+	- 어노테이션을 정의할 수 있는 어노테이션
+	- @Target
+		- 어노테이션의 적용 범위
+			- 메서드, 필드, 매개변수, 클래스, 인터페이스
+			- METHOD, FIELD, TYPE_USE, TYPE ...
+			- ElementType
+	- @Rentention
+		- 어노테이션의 유지 범위(실행 시점)
+			- SOURCE
+				- 소스 상에만 존재, 컴파일 시 제거
+				- 컴파일러에게 정보 전달 목적
+			- CLASS
+				- 소스와 클래스에서 존재, 실행 시에는 무시(기본 값)
+			- RUNTIME
+				- 실행 시 유지(정보 제공)
+
+
+
+
+
+

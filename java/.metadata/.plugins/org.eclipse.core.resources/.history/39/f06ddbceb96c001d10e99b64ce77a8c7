@@ -1,9 +1,0 @@
-package day12.sub1;
-
-public class MemberLogin {
-	public void login(String userId, String userPass) {
-		if(!userId.equals("user01")) {
-			throw new MemberNotFoundException("등록되지 않은 회원입니다.");
-		}
-	}
-}

@@ -19,7 +19,7 @@
 			-RuntimeException
 			-ArithmeticException
 		- 실행 중에 체크되는 예외
-			- 컴파일은 OK, 실행 중 발생
+			- 컴파일은 OK, 실행 중 체크되는 예외
 
 		예) Runtime - 실행
 

@@ -1,0 +1,31 @@
+package day23;
+
+import javax.swing.JOptionPane;
+
+public class Ex01 {
+	public static void main(String[] args) {
+		
+		//Thread thread = new Thread(new ThreadEx01(),"쓰레드!");
+		
+		//thread.start();
+		
+		String message = JOptionPane.showInputDialog("아무 메세지 입력!");
+		System.out.println(message);
+		
+		System.out.println("작업 완료");
+	}
+}
+
+class ThreadEx01 implements Runnable{
+
+	@Override
+	public void run() {
+
+		for(int i = 1; i <= 10; i++) {
+			
+			System.out.println(i + "-" + Thread.currentThread().getName());
+		}
+		
+	}
+	
+}

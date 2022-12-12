@@ -1,0 +1,24 @@
+package day23;
+
+public class Ex08 {
+	
+	static Account account = new Account();
+	
+	public static void main(String[] args) {
+		
+		Thread thread1 = new ThreadEx08();
+		
+	}
+	
+	static class ThreadEx08 implements Runnable{
+		
+		
+		@Override
+		public void run() {
+			
+			account.withdraw();
+		}
+		
+		
+	}
+}

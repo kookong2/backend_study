@@ -1,0 +1,22 @@
+package day23;
+
+public class Ex03 {
+	public static void main(String[] args) {
+		
+		
+	}
+}
+
+class ThreadEx03 implements Runnable{
+
+	@Override
+	public void run() {
+		
+		while(true) {
+			
+			Thread.sleep(3000);
+		}
+	}
+	
+	
+}

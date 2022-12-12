@@ -1,0 +1,52 @@
+package day23;
+
+public class Ex06 {
+	public static void main(String[] args) {
+		
+		
+		
+	}
+}
+
+class ThreadEx06 implements Runnable{
+	
+	private boolean stopped = false;	// 정지 상태 여부
+	private boolean suspended = false;	// 일시 정지 상태 여부
+	
+	private Thread thread;
+	
+	public ThreadEx06(String name) {
+		
+		thread = new Thread(this, "name");
+	}
+
+	@Override
+	public void run() {
+
+		while(true) {
+			
+		}
+		
+	}
+	
+	public void start() {	// 시작
+		thread.start();
+	}
+	
+	public void suspend() {	// 일시 정지
+		
+		suspended = true;
+	}
+	
+	public void stop() {	// 정지
+		
+		stopped = true;
+	}
+	
+	public void resume() {	// 재시작
+		
+		suspended = false;
+	}
+	
+	
+}

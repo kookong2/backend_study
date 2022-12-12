@@ -1,0 +1,9 @@
+package day23;
+
+public class Ex02 {
+
+	public static void main(String[] args) {
+		
+		Thread.currentThread();	// main thread
+	}
+}

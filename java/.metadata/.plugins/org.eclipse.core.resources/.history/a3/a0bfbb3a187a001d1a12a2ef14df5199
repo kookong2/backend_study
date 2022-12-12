@@ -1,0 +1,33 @@
+package day23;
+
+import javax.swing.JOptionPane;
+
+public class Ex07 {
+	public static void main(String[] args) {
+		
+		Thread thread = new Thread(new ThreadEx07());
+		thread.start();
+		
+		for(int i = 0; i < 1000; i++) {
+			System.out.println(i);
+			for(long j = 0; j < 300000000000000L; j++);
+		}
+	}
+}
+
+class ThreadEx07 implements Runnable{
+
+	@Override
+	public void run() {
+
+		Thread thread = Thread.currentThread();
+		while(!thread.interrupted()) {
+			for(int i = 0; i < 100; i++) {
+				System.out.println(i);
+			}
+		}
+		
+	}
+	
+	
+}

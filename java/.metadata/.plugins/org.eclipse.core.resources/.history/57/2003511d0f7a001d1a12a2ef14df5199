@@ -1,0 +1,20 @@
+package day23;
+
+public class Ex05 {
+	public static void main(String[] args) {
+		
+		
+	}
+}
+
+class ThreadEx05_1 implements Runnable{
+
+	@Override
+	public void run() {
+
+
+		
+	}
+	
+	
+}

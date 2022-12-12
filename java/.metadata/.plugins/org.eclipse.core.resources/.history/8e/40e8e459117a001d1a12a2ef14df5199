@@ -1,0 +1,37 @@
+package day23;
+
+public class Ex06 {
+	public static void main(String[] args) {
+		
+		Thread thread = new Thread(new ThreadEx06());
+		
+	}
+}
+
+class ThreadEx06 implements Runnable{
+
+	@Override
+	public void run() {
+
+		
+		
+	}
+	
+	public void start() {	// 시작
+		
+	}
+	
+	public void suspend() {	// 일시 정지
+		
+	}
+	
+	public void stop() {	// 정지
+		
+	}
+	
+	public void resume() {	// 재시작
+		
+	}
+	
+	
+}

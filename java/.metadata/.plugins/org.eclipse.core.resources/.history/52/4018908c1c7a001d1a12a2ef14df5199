@@ -1,0 +1,21 @@
+package day23;
+
+public class Ex08 {
+	public static void main(String[] args) {
+		
+		
+	}
+}
+
+class TreadEx08 implements Runnable{
+
+	Account account = new Account();
+	
+	@Override
+	public void run() {
+
+		account.withdraw();
+	}
+	
+	
+}

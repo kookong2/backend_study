@@ -13,11 +13,5 @@ public class Ex06 {
 		System.out.println(check);
 		
 		Supplier<Person> f3 = Person::new;
-		System.out.println(f3.get());
-		
-		Function<Integer, int[]> f4 = x -> new int[x];
-		Function<Integer, int[]> f5 = int[]::new;
-		int[] nums = f5.apply(5);
-		System.out.println(nums.length);
 	}
 }

@@ -1,0 +1,25 @@
+package day23;
+
+import java.util.Random;
+
+public class Ex07 {
+	public static void main(String[] args) {
+		
+		
+	}
+}
+
+class ThreadEx07 implements Runnable{
+	
+	Account account = new Account();
+
+	@Override
+	public void run() {
+
+		while(account.getBalance() > 0) {
+			
+			int money = (int)(Math.random() * 3 + 1)*100;
+		}
+	}
+	
+}

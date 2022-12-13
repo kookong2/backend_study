@@ -55,12 +55,14 @@
 	- volatile : 캐시에서 데이터 접근이 아닌, 메모리에서 직접 접근
 	- interrupt() 
 		- 중단 요청
-		- 호출 interrupted - true
-	- interrupted()
+		- 호출 interrupted 값 -> true
+	- boolean interrupted()
 		- 중단 상태, 중단 요청 true, 아닐 때는 false 
 		- 현재 interrupted 상태 값 반환
 			-> false로 초기화
 		- InterruptedExeption 발생
+	- boolean isInterrupted()
+		- 현재 interrupted 값만 반환
 	- yield()
 		- 다음 쓰레드에게 작업 양보
 

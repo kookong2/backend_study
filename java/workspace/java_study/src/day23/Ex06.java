@@ -55,6 +55,8 @@ class ThreadEx06 implements Runnable{
 				try {
 					Thread.sleep(1000);
 				} catch (InterruptedException e) {}
+			}else {	// 정지 상태일 때 다른 쓰레드에게 작업 양보
+				Thread.yield();
 			}
 		}
 		
@@ -67,12 +69,14 @@ class ThreadEx06 implements Runnable{
 	public void suspend() {	// 일시 정지
 		
 		suspended = true;
+		thread.interrupt();
 		System.out.println(thread.getName() + " - 일시정지");
 	}
 	
 	public void stop() {	// 정지
 		
 		stopped = true;
+		thread.interrupt();
 		System.out.println(thread.getName() + " - 정지");
 	}
 	

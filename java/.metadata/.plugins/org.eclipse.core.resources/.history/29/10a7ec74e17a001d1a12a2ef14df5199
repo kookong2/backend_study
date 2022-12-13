@@ -1,0 +1,16 @@
+package day24;
+
+import java.util.function.Predicate;
+
+public class Ex03 {
+	public static void main(String[] args) {
+		
+		boolean result = checkNumber(x -> x >= 100, 105);
+		System.out.println(result);
+	}
+	
+	public static boolean checkNumber(Predicate<Integer> predicate, Integer num) {
+		
+		return predicate.test(null);
+	}
+}

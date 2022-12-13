@@ -1,0 +1,13 @@
+package day24;
+
+import java.util.function.*;
+
+public class Ex04 {
+	public static void main(String[] args) {
+		
+		Function<String, Integer> f1 = s -> Integer.parseInt(s);
+		
+		int num = f1.apply("F");
+		System.out.println(num);
+	}
+}

@@ -1,0 +1,25 @@
+package day24;
+
+import java.util.function.Consumer;
+import java.util.function.Supplier;
+
+public class Ex02 {
+	public static void main(String[] args) {
+		
+		// Consumer
+		printString(s -> System.out.println(s), "hello");
+		
+		// Supplier
+		int num = getNumber(() -> (int)Math.random()*10);
+	}
+	
+	public static void printString(Consumer<String> consumer, String s) {
+		
+		consumer.accept(s);
+	}
+	
+	public static Integer getNumber(Supplier<Integer> supplier) {
+		
+		return supplier.get();
+	}
+}

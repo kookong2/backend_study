@@ -8,10 +8,12 @@ public class Ex01 {
 		
 		// FileInputStream
 		try {
-			FileInputStream fis = new FileInputStream("1111.txt");
+			FileInputStream fis = new FileInputStream("111.txt");
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}finally {
+			System.out.println("무조건 실행!");
 		}
 	}
 }

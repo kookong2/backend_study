@@ -1,0 +1,14 @@
+package day25;
+
+import java.util.Arrays;
+
+public class Ex04 {
+	public static void main(String[] args) {
+		
+		String[] names = {"이름1","이름1","이름1","이름2","이름3","이름4","이름5"};
+		
+		String[] names2 = Arrays.stream(names).skip(4).distinct().toArray(String[]::new);
+		System.out.println(Arrays.toString(names2));
+		
+	}
+}

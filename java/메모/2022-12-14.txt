@@ -1,0 +1,84 @@
+스트립(Stream)
+
+1. 스트림이란?
+	- 컬렉션 프레임워크
+	- 배열
+
+2. 스트림의 연산
+	1) 중간 연산
+		- Stream 객체를 바노한하는 메서드
+
+	2) 최종 연산
+		- Stream 이외의 반환값이 있는 메서드
+		- 연산의 최종 결과를 도출하는 메서드
+
+	3) 지연된 연산
+		- 중간 연산은 최종 연산이 호출 되기 전 까지는 실행 x
+
+	4) 기본 자료형을 다루는 스트림
+		- IntStream, LongStream, DoubleStream ...
+
+3. 스트림 만들기
+	1) 컬랙션
+		- Collection
+			- Stream stream()
+
+	2) 배열
+		-Stream Array.stream(T[] t)	
+		- IntStream, LongStream ...
+
+		- Stream.of(...)
+
+	3) 특정 범위와 정수
+
+4. 특정 범위와 정수
+
+5. 임의의 수
+	java.util.Random
+
+6.
+
+9. 스트림의 중간 연산
+	1) 스트림 자르기
+		- skip()
+		- limit()
+
+	2) 스트림 요소 걸러내기
+		- filter() 
+		- distinct()
+
+	3) 정렬
+		- sorted()
+		- Comparable
+			- compareTo
+	
+	4) 변환
+		- map()
+	
+	5) 조회
+		- peek()
+
+	6) Optional
+		- NullPointException
+		- 래퍼클래스 (Wrapper Class)
+
+11. 스트림의 최종 연산
+	1) orEach()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,32 @@
+java.time 패키지
+
+2. 객체 생성하기
+	- now() : 현재 날짜, 시간
+	- of() : 특정 날짜, 시간
+
+3. 특정 필드의 값 가져오기
+	- get()
+	- getXXX()
+	- TemporalField <-- ChronoField
+
+4. 필드의 값 변경하기
+	- with() : 변경
+	- plus() : 날짜, 시간 증가
+	- minus() : 날짜, 시간 감소
+
+5. 날짜와 시간의 비교
+	- isAfter() : 시간 이후
+	- isBefore() : 시간 이전
+	- isEqual() : 동일 시간
+
+6. Instant
+
+7. LocalDateTime 과 ZonedDateTime
+
+8. ZonedOffset
+
+9. OffsetDateTime
+
+10. Period와 Duration
+
+1시간 20분

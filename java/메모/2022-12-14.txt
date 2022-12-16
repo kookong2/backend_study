@@ -61,6 +61,9 @@
 	6) Optional
 		- NullPointException
 		- 래퍼클래스 (Wrapper Class)
+		- Optional
+			- .of("값") : null 값 미허용(예외 발생)
+			- .ofNullable("값") : null 값 허용
 
 11. 스트림의 최종 연산
 	1) orEach()

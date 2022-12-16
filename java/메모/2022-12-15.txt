@@ -1,0 +1,131 @@
+입출력
+1. 입출력이란?
+	- 입출력은 컴퓨터 내부 또는 외부와 프로그램간의 데이터를 주고받는 것을 말한다.
+	- 키보드로부터 데이터를 입력받는다든가 System.out.println()을 이용해서 화면에
+		 출력한다던가 하는 것이 가장 기본적인 입출력의 예이다.
+
+2. 바이트 기반 스트림(1바이트)
+	- 처리 단위가 1바이트
+		- 1바이트 처리 완료 -> 준비 -> 1바이트 처리 -> 준비
+	1) InputStream
+	
+	- 기반 스트림
+		- 직접 데이터에 접근해서 입력을 받는 경우
+		- ByteArrayInputStream : 메모리
+		- FileInputStream : 파일
+
+	- 보조 스트림
+		- FileterInputStream
+		- 직접 데이터 접근 x
+		- 기반 스트림에 추가적인 기능 추가
+		- 생성자 매개 변수 InputStream
+			- 기반 스트림, 매개 스트림
+			
+		- BufferedIntputStream
+			- 8k
+
+		- DataInputStream
+			- DataInput 인터페이스 
+		- ObjectInputStream
+		- SequenceInputStream
+			- 파일을 합칠 때
+
+
+	2) 출력 스트림
+	
+	 OutfputStream
+	- 기반 스트림
+		- 직접 데이터에 접근 출력
+		- ByteArrayOutputStream
+		- FileOutputStream	// 기본 자료형 읽기
+
+	- 보조 스트림
+		- 가장 상위 클래스
+			- FilterOutputStream
+		- 직접 데이터에 접근 x
+		- 기반 스트림에 추가적인 기능 부여
+		- 생성자 매개변수 OutputStream
+			- 기반 스트림, 매개 스트림
+
+		- ByfferedOutputStream
+			- 8k
+
+		- DataOutputStream	// 기본 자료형 쓰기
+			- DataOutput 인터페이스
+		- ObjectOutStream
+
+3. 문자 기반 스트림 (문자 단위 - 2byte, 3byte)
+	- Reader
+	1) 입력 스트림
+
+		- read(char[] cbuf, int off, int len)
+
+		- 기반 스트림
+			- 직접 데이터 접근(문자 단위) 읽기
+			- CharArrayInputStream : 메모리
+			- FileReader : 파일
+			- StringReader : 메모리
+
+		- 보조 스트림
+			- 직접 데이터 접근 x
+			- 기반 스트림 + 추가 기능(문자 단위 처리)
+			- BufferedReader : 버퍼(8kb)	
+				- 문장 단위로 읽고 처리하는 기능
+				- String readLine()
+					- 파일 끝에 도달하면 null이 반환
+
+	- Writer
+	2) 출력 스트림
+
+		- Writer
+			- write(char[] cbuf, int off, int len)
+
+		- 기반 스트림
+			- 직접 데이터 접근(문자 단위) 출력
+			- CharArrayOutputStream : 메모리
+			- FileWriter : 파일
+			- StringWriter : 메모리
+
+		- 보조 스트림
+			- 직접 데이터 접근 x
+			- 기반 스트림 + 추가 기능(문자 단위 처리)
+			- BufferedWriter : 8kb(버퍼)
+			- PrintWriter / PrintStream
+
+4. InputStreamReader와 OutputStreamWriter
+ 	- 바이트 단위 스트림 -> 문자 단위 스트림으로 바꿈
+	- (InputStream, OutputStream) -> Reader, Writer
+
+5. PrintStream	/ PrintWriter / 버퍼 내장
+	- println() -> 줄 개행 문자(\r\n)
+	- println -> 기본자료형 + String 출력 + 줄 개행 문자(\r\n)
+	- printf -> 형식화 해서 출력
+	- print	-> 기본 자료형 + String 출력
+	
+	- 메타 문자 : 특정 동작을 발생시키는 문자 
+		- \r : carrige return : 커서를 가장 처음 위치로 이동
+		- \n : new line : 줄 개행 (자바에서는 \n -> %n 으로도 가능)
+		- \r\n : 엔터 키 눌렀을 때 동작	
+		- \t : tab : 탭 키(공백 4칸 또는 2칸)
+
+6. 표준 입출력
+	- System.in
+	- System.out
+	- System.err
+
+7. File
+
+8. RandomAccessFile
+
+
+
+
+
+
+
+
+
+
+
+
+			

@@ -1,0 +1,10 @@
+package day28.sub1;
+
+import java.net.*;
+
+public class Ex01 {
+	public static void main(String[] args) throws Exception {
+		
+		InetAddress ia = InetAddress.getByName("wwww.naver.com");
+	}
+}

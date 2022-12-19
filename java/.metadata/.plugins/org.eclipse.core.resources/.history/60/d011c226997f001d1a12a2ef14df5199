@@ -1,0 +1,14 @@
+package day28.sub1;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+
+public class Ex02 {
+	public static void main(String[] args) throws Exception {
+		
+		URL url = new URL("https://newsstand.naver.com/?list=&pcode=073");
+		
+		String proto = url.getProtocol();
+		System.out.printf("protocol : %s%n", proto);
+	}
+}

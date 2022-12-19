@@ -100,6 +100,13 @@
 	- println() -> 줄 개행 문자(\r\n)
 	- println -> 기본자료형 + String 출력 + 줄 개행 문자(\r\n)
 	- printf -> 형식화 해서 출력
+		- %d -> 정수
+		- %o
+		- %x
+		- %f -> 실수
+		- %c -> 문자
+    		- %s -> 문자열
+
 	- print	-> 기본 자료형 + String 출력
 	
 	- 메타 문자 : 특정 동작을 발생시키는 문자 
@@ -113,9 +120,43 @@
 	- System.out
 	- System.err
 
+	- System
+		- static InputStream in
+		- static InputStream out
+		- static InputStream err
+		- setOut
+		- setErr
+		- setln
+
+
 7. File
+	- 파일과 디렉토리
+		- 정보, 조작
 
 8. RandomAccessFile
+	- 파일 읽기, 쓰기
+	
+	- EOFException - End Of File Exception
+		- seek(0);
+
+9. 직렬화(Serialization)
+	- 직렬화란 객체를 데이터 스트림으로 만드는 것을 뜻한다.
+	- 객체에 저장된 데이터를 스트림에 쓰기(write) 위해 연속적인 데이터로 변환하는 것을 말한다.
+	- 반대로 스트림으로부터 데이터를 읽어서 객체를 만드는 것을 역직렬화(deserialization)라고 한다.
+
+	- 멤버 변수만 직렬화된 데이터로 변환
+	- 메서드, 상수
+
+	- java.io.Serializable
+		- 마커인터페이스 : 의사표현
+
+	1) ObjectInputStream, ObjectOutputStream
+	2) 직렬화가 가능한 클래스 만들기 
+		- Serializable, transient
+	3) 직렬화 가능한 클래스의 버전 관리
+	
+	- UID : Unique ID
+	- serialVersionUID
 
 
 

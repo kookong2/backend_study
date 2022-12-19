@@ -1,0 +1,23 @@
+package day28;
+
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+
+public class Ex06 {
+	public static void main(String[] args) {
+		
+		Member user1 = new Member("user01", "12345678");
+		Member user2 = new Member("user02", "12345678");
+
+		try(FileOutputStream fos = new FileOutputStream("user.dat");
+			ObjectOutputStream oos = new ObjectOutputStream(fos)) {
+			
+			oos.writeObject(user1);
+			oos.writeObject(user2);
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+}

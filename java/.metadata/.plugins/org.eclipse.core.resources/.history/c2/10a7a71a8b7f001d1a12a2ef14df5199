@@ -1,0 +1,14 @@
+package day28;
+
+import java.io.FileOutputStream;
+
+public class Ex04 {
+	public static void main(String[] args) {
+		
+		try(FileOutputStream fos = new FileOutputStream("data.txt")) {
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+}

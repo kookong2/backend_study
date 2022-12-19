@@ -1,0 +1,26 @@
+package day28.sub1;
+
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.net.URLConnection;
+
+public class Ex03 {
+	public static void main(String[] args) throws Exception{
+		
+		URL url = new URL("https://www.naver.com");
+		
+		HttpURLConnection conn = (HttpURLConnection)url.openConnection();
+		conn.connect();
+		
+		InputStream in = conn.getInputStream();
+		// InputStreamReader
+		int i = 0;
+		while((i = in.read()) != -1) {
+			char ch = (char)i;
+			System.out.print(ch);
+		}
+		
+		
+	}
+}

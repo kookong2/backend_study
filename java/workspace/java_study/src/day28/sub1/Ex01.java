@@ -1,0 +1,32 @@
+package day28.sub1;
+
+import java.net.*;
+import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+public class Ex01 {
+	public static void main(String[] args) throws Exception {
+		
+		InetAddress ia = InetAddress.getByName("www.naver.com");
+		
+		byte[] addr = ia.getAddress();	// 0~255 - unsigned byte / -126~125
+		//System.out.println(Arrays.toString(addr));
+		
+		//String addr2 = Stream.of(addr).mapToInt(n -> (n + 256)).collect(Collectors.joining("."), null, null);
+		/*
+		for(byte add: addr) {
+			
+			int _add = (int)add;
+			_add = add < 0? add + 256 : add;
+			System.out.println(_add);
+		}
+		*/
+		
+		InetAddress[] addrs = ia.getAllByName("naver.com");
+		for(InetAddress add: addrs) {
+			String ip = add.getHostAddress();
+			System.out.println(ip);
+		}
+	}
+}

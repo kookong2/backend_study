@@ -1,0 +1,24 @@
+package day28;
+
+import java.io.File;
+import java.io.IOException;
+
+public class Ex03 {
+	public static void main(String[] args) throws IOException {
+		
+		File dir = new File("C:\\uploads");
+		dir.mkdir();
+		
+		File file = new File(dir,"blank.txt");
+		file.createNewFile();
+		
+		String path = file.getPath();
+		System.out.printf("파일 경로 : %s%n", path);
+		String name = file.getName();
+		System.out.printf("파일 명 : %s%n",name);
+		
+		File tmpFile = File.createTempFile("tmp", ".log", dir);
+		System.out.printf("임시 파일 경로 : %s%n", tmpFile.getPath());
+		
+	}
+}

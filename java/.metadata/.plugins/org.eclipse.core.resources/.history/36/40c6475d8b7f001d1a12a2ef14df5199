@@ -1,0 +1,21 @@
+package day28;
+
+import java.io.DataOutputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class Ex04 {
+	public static void main(String[] args) {
+		
+		try(FileOutputStream fos = new FileOutputStream("data.txt");
+			DataOutputStream dos = new DataOutputStream(fos)) {
+			
+			dos.writeInt(100);
+			dos.writeChar('A');
+			dos.writeUTF("안녕");
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+}

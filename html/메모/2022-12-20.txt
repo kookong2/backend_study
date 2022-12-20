@@ -1,0 +1,15 @@
+1. HTML
+
+태그(요소)
+<태그명>내용</태그명>
+<html>~</html>
+
+<!DOCTYPE html> --> HTML 버전(HTML5)
+<html>
+	<head>
+		사이트의 정보/ 보이지 않는 부분을 정의
+	</head>
+	<body>
+		실제 출력 부분
+	</body>
+</html>

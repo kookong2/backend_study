@@ -1,9 +1,0 @@
-package day22;
-
-@MyAnno({"값1","값2","값3"})
-public class Ex02 {
-	public static void main(String[] args) {
-		
-		
-	}
-}

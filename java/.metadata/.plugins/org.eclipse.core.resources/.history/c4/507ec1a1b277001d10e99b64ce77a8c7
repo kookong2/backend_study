@@ -1,7 +1,0 @@
-package day22;
-
-import java.lang.annotation.*;
-
-public @interface Todos {
-
-}

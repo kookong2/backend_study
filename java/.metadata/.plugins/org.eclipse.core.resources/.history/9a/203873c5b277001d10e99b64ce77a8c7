@@ -1,7 +1,0 @@
-package day22;
-
-
-
-public @interface Todo {
-
-}

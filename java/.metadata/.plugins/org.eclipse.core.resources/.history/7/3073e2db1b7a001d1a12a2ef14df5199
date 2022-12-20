@@ -1,9 +1,0 @@
-package day23;
-
-public class Account {
-	private int money = 10000;
-	
-	private void withdraw(int amount) {
-		
-	}
-}

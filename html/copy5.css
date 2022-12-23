@@ -1,0 +1,248 @@
+@charset "UTF-8";
+
+.dn,
+.hidden {
+	display: none;
+}
+
+/* CHECK BOX */
+.inp_chk input {
+	display: inline-block;
+	width: 23px;
+	height: 23px;
+	margin: -3px 5px 0 0;
+	vertical-align: middle;
+	background: url('../img/markers/common/chk.png') no-repeat center;
+	background-size: 100%;
+	border: none;
+}
+
+.inp_chk input:checked {
+	background: url('../img/markers/common/chk_on.png') no-repeat center;
+	background-size: 100%;
+}
+
+.inp_chk label {
+	cursor: pointer;
+}
+
+/* 체크박스 라디오버튼 스타일 */
+.form_element {
+	display: inline-block;
+	overflow: hidden;
+	position: relative;
+}
+
+span.form_element {
+	display: inline-block;
+}
+
+.form_element label {
+	position: relative;
+	top: 0;
+	left: 0;
+	display: inline-block;
+	min-width: 20px;
+	min-height: 20px;
+	padding: 0 0 0 27px;
+	background: url('../img/common/input/check_off.png') no-repeat 1px top;
+}
+
+.form_element label:hover {
+	background: url('../img/common/input/check_over.png') no-repeat 1px top;
+}
+
+.form_element label.on {
+	background: url('../img/common/input/check_on.png') no-repeat 1px top;
+}
+
+.form_element label.choice {
+	background: url('../img/common/input/radio_off.png') no-repeat 1px 50%;
+}
+
+.form_element label.choice:hover {
+	background: url('../img/common/input/radio_over.png') no-repeat 1px 50%;
+}
+
+.form_element label.choice.on {
+	background: url('../img/common/input/radio_on.png') no-repeat 1px 50%;
+}
+
+.form_element label.check_s {
+	min-width: 13px;
+	padding: 0 0 0 22px;
+	background: url('../img/common/input/check_off.png') no-repeat 1px 2px;
+}
+
+.form_element label.check_s:hover {
+	background: url('../img/common/input/check_over.png') no-repeat 1px 2px;
+}
+
+.form_element label.check_s.on {
+	background: url('../img/common/input/check_on.png') no-repeat 1px 2px;
+}
+
+.form_element label.choice_s {
+	min-width: 13px;
+	padding: 0 0 0 22px;
+	background: url('../img/common/input/radio_off_small.png') no-repeat 1px 50%;
+}
+
+.form_element label.choice_s:hover {
+	background: url('../img/common/input/radio_over_small.png') no-repeat 1px 50%;
+}
+
+.form_element label.choice_s.on {
+	background: url('../img/common/input/radio_on_small.png') no-repeat 1px 50%;
+}
+
+.form_element label.single {
+	width: 21px;
+	height: 21px;
+	padding: 1px 0 0;
+	background-color: transparent;
+	text-indent: -9999px;
+}
+
+.form_element label.single:hover {
+	background-color: transparent;
+}
+
+.form_element label span {
+	color: #979797;
+}
+
+.form_element label img {
+	vertical-align: middle;
+}
+
+.form_element input {
+	position: absolute;
+	top: 3px;
+	left: 1px;
+	width: 0;
+	z-index: -1;
+	visibility: hidden;
+}
+
+/** 체크박스용 비활성화 **/
+.form_element label.check_dis_s {
+	background-image: url('../img/common/input/check_dis.png');
+}
+
+/* SELECT BOX */
+.inp_sel select {
+	width: 100%;
+	height: 45px;
+	border: 1px solid #e5e5e5;
+	border-radius: 3px;
+	text-indent: 15px;
+	font-size: 13px;
+	background: #ffffff url('../img/markers/common/sel_dn.png') no-repeat calc(100% - 12px) center;
+	background-size: 17px;
+	cursor: pointer;
+}
+
+
+.table_style1 th {
+	padding: 10px 10px 7px 10px;
+	border-bottom: 1px solid #e8e8e8;
+	background: #f9f9f9;
+	font-weight: normal;
+	color: #5e5e5e;
+	font-size: 13px;
+	text-align: center;
+}
+
+.table_style1 td {
+	padding: 10px 10px 7px 10px;
+	border-bottom: 1px solid #e8e8e8;
+	font-weight: bold;
+	color: #5e5e5e;
+	font-size: 13px;
+	text-align: center;
+	word-break: keep-all;
+}
+
+/* 배송지 등록 */
+
+/* Slider */
+
+
+/* 딤 팝업 배경*/
+
+
+
+/*───────────────────────────────────────────────────────────
+
+	 리스트 타입 및 옵션 (장바구니,찜리스트,상품상세)
+
+───────────────────────────────────────────────────────────*/
+
+
+/*** 쿠폰 적용 레이어 | goods/layer_coupon_apply.php ***/
+
+/*** 쿠폰 다운받기 레이어 | goods/layer_coupon_down.php ***/
+
+/* 쿠폰 다운받기 상단 */
+
+
+/* 쿠폰 다운받기 리스트 */
+
+
+/*** 옵션 선택 레이어 | goods/layer_option.php ***/
+
+/* 팝업시 닫기 */
+
+
+/* 세로 스크롤 고정 */
+
+
+/* 배송비 */
+
+
+/* 찜리스트 */
+
+
+/* 멀티옵션 */
+
+
+/* 싱글옵션 */
+
+
+/* 추가옵션 */
+
+
+/* 텍스트 입력 필드 */
+
+
+/** 옵션 선택 상품 */
+
+
+/* 팝업창일때 하단 버튼 간격 */
+
+
+/* 추가상품 선택 */
+
+
+/* 스크롤 고정 */
+
+/* 기본 사이즈 */
+
+/* 쿠폰 취소 변경 */
+
+/* 장바구니 이동 레이어 및 찜리스트 이동 레이어 */
+
+/*** 미확인 입금자 리스트 (PC 동일 적용) | service/ghost_depositor.php ***/
+
+/*** 미확인 입금자 리스트 (모바일 별도 적용) | service/ghost_depositor.php ***/
+
+/*** 미확인 입금자 배너 이미지 ***/
+
+/*** 주문취소 사유 레이어 ***/
+
+/** 조건별 배송비 테이블 **/
+
+/* 비회원 주문불가 안내 */
+
+/* 14세 이상 동의 추가 */

@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <title>뉴마커스</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="뉴마커스" />
+    <meta name="viewport"
+        content="user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+
+    <!-- 스타일 시트 순서대로 카피함 -->
+    <!-- png 파일 같은거 가져와야 함 -->
+    <!-- <link rel="stylesheet" href="copy1.css">  필요 없음 -->
+    <!-- <link rel="stylesheet" href="copy2.css">  필요 없음 -->
+    <!-- copy3 -> 태그 초기화 부분 -->
+    <link rel="stylesheet" href="copy3.css">
+    <!-- copy4 -> 헤더, 중앙위치, 네비게이션, footer, 브랜드 검색 버튼 -->
+    <link rel="stylesheet" href="copy4.css">
+    <!-- copy5 -> 체크박스 등 여러가지 기능에 대한 css -->
+    <link rel="stylesheet" href="copy5.css">
+    <!-- copy6 -> 버튼 관련 css -->
+    <link rel="stylesheet" href="copy6.css">
+
+    <!-- <link rel="stylesheet" href="copy7.css"> 필요 없음 -->
+    <link rel="stylesheet" href="copy8.css">
+    <!-- <link rel="stylesheet" href="copy9.css"> 필요 없음 -->
+    <!-- <link rel="stylesheet" href="copy10.css"> 필요 없음 -->
+    <!-- <link rel="stylesheet" href="copy11.css"> 필요 없음 -->
+
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="top_area"></div>
+        <div class="st-container" id="stContainter">
+
+            <!-- 상단 로고부터, 오른쪽 마이페이지와 장바구니 로고, 회원로그인 글씨까지 html-->
+            <div id="header_wrap">
+                <header class='box box1'>
+                    <div class='left'>
+                        <button class='open_side_menu'></button>
+                        <button type='button' class="top_search bn_srch"></button>
+                    </div>
+                    <div class='logo'>
+                        <a href="../main/index.php"><img
+                                src="https://cdn-pro-web-151-250-godomall.spdycdn.net/rkdwlstjr782_godomall_com/data/skin/mobile/moment_C/img/banner/1bb87d41d15fe27b500a4bfcde01bb0e_18980.png"
+                                alt="상단 로고" title="상단 로고" /></a>
+                    </div>
+                    <div class='right'>
+
+                        <img src='https://cdn-pro-web-151-250-godomall.spdycdn.net/rkdwlstjr782_godomall_com/data/skin/mobile/moment_C/img/markers/header/person.png'
+                            class='icon1 open_side_right' id='open_side_right'>
+
+                        <a href="/order/cart.php" class="cart">
+                            <span class='cart_cnt montserrat'>0</span>
+                            <img src='https://cdn-pro-web-151-250-godomall.spdycdn.net/rkdwlstjr782_godomall_com/data/skin/mobile/moment_C/img/markers/header/cart.png'
+                                class='icon2'>
+                        </a>
+                    </div>
+                    
+                </header>
+                <div class='page_location'>
+                    <div class='back' onclick="history.back();"></div>
+                    회원로그인
+                </div>
+            </div>
+
+            <!-- //header_wrap -->
+            <div id="container">
+                <div id="contents_wrap">
+
+                    
+                    <div class="login">
+                        <div class="login_box">
+                            <form id="formLogin" name="login_form" action="https://m.n-mk.net/member/login_ps.php"
+                                method="post">
+                                <fieldset>
+                                    <legend>회원 로그인</legend>
+                                    <input type="hidden" name="returnUrl" value="https%3A%2F%2Fm.n-mk.net%3A443" />
+                                    <input type="hidden" name="close" value="" />
+                                    <input type="hidden" name="saveFlag" value="" />
+                                    <input type="hidden" id="mode" name="mode" value="login" />
+                                    <input type="hidden" id="isMyapp" name="isMyapp" value="" />
+
+
+                                    <input type="text" id="loginId" name="loginId" value="" placeholder="아이디" />
+
+                                    <input type="password" placeholder="비밀번호" id="loginPwd" name="loginPwd" value="" />
+
+                                    <div class="inp_chk">
+                                        <input type="checkbox" name="saveAutoLogin" value="y" id="saveAutoLogin" />
+                                        <label for="saveAutoLogin">로그인 유지</label>
+                                        <input type="checkbox" id="saveId" name="saveId" value="y" />
+                                        <label for="saveId">아이디 저장</label>
+                                    </div>
+                                    <div class="submit">
+                                        <button type="submit"
+                                            class="member_login_order_btn member_login_btn">로그인</button>
+                                    </div>
+                                </fieldset>
+                            </form>
+                            <ul class="login_find">
+                                <li><a href="../member/join_method.php">회원가입</a></li>
+                                <li><a href="../member/find_id.php">아이디찾기</a></li>
+                                <li><a href="../member/find_password.php">비밀번호찾기</a></li>
+                            </ul>
+                        </div>
+                        <!-- //login_box -->
+                        <div class='sns_login_wrap'>
+                            <div class='tit'><span class='montserrat'>SNS</span>간편 로그인</div>
+                            <ul class="sns_login">
+                                <li class="naver js_btn_naver_login"><img
+                                        src="https://cdn-pro-web-151-250-godomall.spdycdn.net/rkdwlstjr782_godomall_com/data/skin/mobile/moment_C/img/markers/member/naver_login.png"
+                                        alt="네이버 아이디 로그인" /></li>
+                                <li class="kakao js_btn_kakao_login" data-return-url="https://m.n-mk.net:443"><img
+                                        src="https://cdn-pro-web-151-250-godomall.spdycdn.net/rkdwlstjr782_godomall_com/data/skin/mobile/moment_C/img/markers/member/kakao_login.png"
+                                        alt="카카오  아이디 로그인"></li>
+                            </ul>
+                            <!-- //sns_login -->
+                        </div>
+                        <!--// sns_login_wrap -->
+
+
+                        <div class="guest_order_box">
+
+                            <p class="guest_txt">
+                                <strong>비회원 주문조회</strong>
+                            </p>
+                            <div class='sub_txt'>주문자 이름과 주문 번호를 입력해주세요</div>
+                            <!-- //guest_txt -->
+                            <form id="formOrderLogin" name="login_form" action="../member/member_ps.php" method="post">
+                                <fieldset>
+                                    <legend>주문조회 영역</legend>
+                                    <input type="hidden" name="mode" value="guestOrder" />
+                                    <input type="hidden" name="returnUrl" value="../mypage/order_view.php" />
+
+                                    <input type="text" id="orderNm" name="orderNm" value="" maxlength="12" title="주문자명"
+                                        required="required" msgr="주문자명을 입력하세요." placeholder="주문자명" />
+
+                                    <input type="text" id="orderNo" name="orderNo" maxlength="34" title="주문번호"
+                                        required="required" msgr="주문번호를 입력하세요." placeholder="주문번호"
+                                        data-max-length="16" />
+
+                                    <button type="submit" class="member_login_order_btn">주문조회 하기</button>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <!-- //guest_order_box -->
+                    </div>
+                    
+                </div>
+                <!-- //contents_wrap -->
+            </div>
+            <!-- //container -->
+            <footer id="footer">
+                <div class='logo'><img
+                        src="https://cdn-pro-web-151-250-godomall.spdycdn.net/rkdwlstjr782_godomall_com/data/skin/mobile/moment_C/img/banner/1bb87d41d15fe27b500a4bfcde01bb0e_76321.png"
+                        alt="좌측 로고" title="좌측 로고" /></div>
+
+                <a href="tel:032-765-1884" class='center_phone montserrat'>
+                    <img
+                        src='https://cdn-pro-web-151-250-godomall.spdycdn.net/rkdwlstjr782_godomall_com/data/skin/mobile/moment_C/img/markers/footer/phone.png'>032.765.1884
+                </a>
+
+                <div class='bank_info'>
+                    입금정보:신한은행 <span class='montserrat'>100-033-833284</span>(주)뉴마커스
+                </div>
+                <!--// bank_info -->
+
+                <div class='business_info'>
+                    <div class='tit'><span>(주)뉴마커스 사업자 정보</span></div>
+                    <div class='info'>
+                        <dl>
+                            <dt>대표</dt>
+                            <dd>박상희</dd>
+                        </dl>
+                        <dl>
+                            <dt>주소</dt>
+                            <dd>인천광역시 미추홀구 미추로 28 마커스빌딩</dd>
+                        </dl>
+                        <dl>
+                            <dt>사업자등록번호</dt>
+                            <dd class='montserrat'>
+                                848-86-01521
+                                <a href="#" class="btn_licensee_info"
+                                    onclick="gd_popup_bizInfo('8488601521'); return false;">사업자번호조회</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>통신판매업신고번호</dt>
+                            <dd>제2019-인천미추홀-0184호</dd>
+                        </dl>
+                        <dl>
+                            <dt>문의</dt>
+                            <dd class='montserrat'><a class='email montserrat'
+                                    href='mailto:nmarkers@naver.com'>nmarkers@naver.com</a></dd>
+                        </dl>
+                        <dl>
+                            <dt>Fax.</dt>
+                            <dd class='montserrat'>032-765-1864</dd>
+                        </dl>
+                    </div>
+                    <!--// info -->
+                </div>
+                <!--// business_info -->
+
+                <div class='links'>
+                    <a href='/service/company.php'>회사소개</a>
+                    <a href='/service/agreement.php'>이용약관</a>
+                    <a href='/service/private.php'>개인정보처리방침</a>
+                    <a href='http://n-mk.net/main/index.php?pcView=y'>PC버전</a>
+                </div>
+                <!--// links -->
+            </footer>
+            <!-- //footer -->
+        </div>
+        <!-- //st-container -->
+    </div>
+    <!-- //wrap -->
+
+
+</body>
+
+</html>

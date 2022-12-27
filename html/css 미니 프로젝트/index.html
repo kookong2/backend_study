@@ -1,40 +1,21 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
 
 <head>
-    <title>뉴마커스</title>
-    <meta charset="utf-8" />
-    <meta name="author" content="뉴마커스" />
-    <meta name="viewport"
-        content="user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 부분</title>
 
-    <!-- 스타일 시트 순서대로 카피함 -->
-    <!-- png 파일 같은거 가져와야 함 -->
-    <!-- <link rel="stylesheet" href="copy1.css">  필요 없음 -->
-    <!-- <link rel="stylesheet" href="copy2.css">  필요 없음 -->
-    <!-- copy3 -> 태그 초기화 부분 -->
-    <link rel="stylesheet" href="copy3.css">
-    <!-- copy4 -> 헤더, 중앙위치, 네비게이션, footer, 브랜드 검색 버튼 -->
-    <link rel="stylesheet" href="copy4.css">
-    <!-- copy5 -> 체크박스 등 여러가지 기능에 대한 css -->
-    <link rel="stylesheet" href="copy5.css">
-    <!-- copy6 -> 버튼 관련 css -->
-    <link rel="stylesheet" href="copy6.css">
-
-    <!-- <link rel="stylesheet" href="copy7.css"> 필요 없음 -->
-    <link rel="stylesheet" href="copy8.css">
-    <!-- <link rel="stylesheet" href="copy9.css"> 필요 없음 -->
-    <!-- <link rel="stylesheet" href="copy10.css"> 필요 없음 -->
-    <!-- <link rel="stylesheet" href="copy11.css"> 필요 없음 -->
-
+    <link rel="stylesheet" href="initialization.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div id="wrap">
         <div class="top_area"></div>
-        <div class="st-container" id="stContainter">
-
-            <!-- 상단 로고부터, 오른쪽 마이페이지와 장바구니 로고, 회원로그인 글씨까지 html-->
+        <div class="st-container" id="st-container">
+            <!-- 상단 로고, 오른쪽 상단 마이페이지와 장바구니, 회원 로그인 부분 -->
             <div id="header_wrap">
                 <header class='box box1'>
                     <div class='left'>
@@ -65,15 +46,15 @@
                 </div>
             </div>
 
-            <!-- //header_wrap -->
+            <!-- 로그인부터 비회원 주문조회까지 -->
             <div id="container">
                 <div id="contents_wrap">
-
-
+                    <!-- 로그인 -->
                     <div class="login">
                         <div class="login_box">
                             <form id="formLogin" name="login_form" action="https://m.n-mk.net/member/login_ps.php"
                                 method="post">
+
                                 <fieldset>
                                     <legend>회원 로그인</legend>
                                     <input type="hidden" name="returnUrl" value="https%3A%2F%2Fm.n-mk.net%3A443" />
@@ -99,13 +80,15 @@
                                     </div>
                                 </fieldset>
                             </form>
+                            <!-- 아이디, 비밀번호 찾기 및 회원가입 -->
                             <ul class="login_find">
                                 <li><a href="../member/join_method.php">회원가입</a></li>
                                 <li><a href="../member/find_id.php">아이디찾기</a></li>
                                 <li><a href="../member/find_password.php">비밀번호찾기</a></li>
                             </ul>
                         </div>
-                        <!-- //login_box -->
+
+                        <!-- 네이버, 카카오 아이디로 로그인 -->
                         <div class='sns_login_wrap'>
                             <div class='tit'><span class='montserrat'>SNS</span>간편 로그인</div>
                             <ul class="sns_login">
@@ -116,11 +99,8 @@
                                         src="https://cdn-pro-web-151-250-godomall.spdycdn.net/rkdwlstjr782_godomall_com/data/skin/mobile/moment_C/img/markers/member/kakao_login.png"
                                         alt="카카오  아이디 로그인"></li>
                             </ul>
-                            <!-- //sns_login -->
                         </div>
-                        <!--// sns_login_wrap -->
-
-
+                        <!-- 비회원 주문조회 -->
                         <div class="guest_order_box">
 
                             <p class="guest_txt">
@@ -145,13 +125,11 @@
                                 </fieldset>
                             </form>
                         </div>
-                        <!-- //guest_order_box -->
                     </div>
-
                 </div>
-                <!-- //contents_wrap -->
             </div>
-            <!-- //container -->
+
+            <!-- footer -->
             <footer id="footer">
                 <div class='logo'><img
                         src="https://cdn-pro-web-151-250-godomall.spdycdn.net/rkdwlstjr782_godomall_com/data/skin/mobile/moment_C/img/banner/1bb87d41d15fe27b500a4bfcde01bb0e_76321.png"
@@ -165,8 +143,7 @@
                 <div class='bank_info'>
                     입금정보:신한은행 <span class='montserrat'>100-033-833284</span>(주)뉴마커스
                 </div>
-                <!--// bank_info -->
-
+                
                 <div class='business_info'>
                     <div class='tit'><span>(주)뉴마커스 사업자 정보</span></div>
                     <div class='info'>
@@ -212,13 +189,9 @@
                 </div>
                 <!--// links -->
             </footer>
-            <!-- //footer -->
         </div>
-        <!-- //st-container -->
     </div>
-    <!-- //wrap -->
-
-
+    </div>
 </body>
 
 </html>

@@ -1,0 +1,504 @@
+body{
+    width: 100%;
+    height: auto;
+}
+
+#wrap{
+    min-width: 320px;
+    width: 100%;
+    height: 100%;
+}
+
+/*───────────────────────────────────────────────────────────
+
+	 공통
+
+───────────────────────────────────────────────────────────*/
+
+
+.input_wrap input[type='text'],
+.input_wrap input[type='password'] {
+    width: 100%;
+    margin-bottom: 10px;
+    height: 45px;
+    border-radius: 3px;
+    border: 1px solid #e5e5e5;
+    font-size: 13px;
+    padding: 0 10px;
+}
+
+.input_wrap input[type='text']:read-only,
+.input_wrap input[type='password']:read-only {
+    background-color: #f7f7f7;
+}
+
+/* 로그인 / 주문조회 / 비회원 주문하기 버튼  */
+
+.member_login_order_btn {
+	width: 100%;
+	display: block;
+	height: 45px;
+	border: 0;
+	color: #ffffff;
+	font-size: 15px;
+	font-weight: 700;
+	background-color: #8769f0;
+	border-radius: 3px;
+	text-align: center;
+}
+
+/*** 아이디 찾기 | member/find_id.html ***/
+
+.find_id_btn {
+	display: block;
+	width: 100%;
+	height: 45px;
+	text-align: center;
+	border: 0;
+	border-radius: 3px;
+	background-color: #333333;
+	color: #ffffff;
+	font-size: 15px;
+	font-weight: 700;
+}
+
+/*** 비밀번호 찾기 | member/find_id.html ***/
+
+.find_password_btn {
+	display: block;
+	width: 100%;
+	height: 45px;
+	text-align: center;
+	border: 0;
+	border-radius: 3px;
+	background-color: #333333;
+	color: #ffffff;
+	font-size: 15px;
+	font-weight: 700;
+}
+
+/*** 회원로그인 | member/join_agreement.html ***/
+/* 체크 박스 */
+.login {
+    background-color: #ededed;
+}
+
+.login fieldset legend {
+    font-size: 17px;
+    color: #333333;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 19px;
+}
+
+.login .login_box {
+    padding: 30px 15px 40px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #dfe1e5;
+    margin-bottom: 10px;
+}
+
+.login .login_box #loginId,
+.login .login_box #loginPwd {
+    border: 1px solid #e5e5e5;
+    width: 100%;
+    height: 45px;
+    font-size: 13px;
+    padding: 0;
+    border-radius: 3px;
+}
+
+.login .login_box #loginId {
+    margin-bottom: 10px;
+}
+
+.login .login_box #loginPwd {
+    margin-bottom: 15px;
+}
+
+.login .login_box .submit {
+    margin-top: 25px;
+}
+
+.login .login_box .inp_chk label {
+    margin-right: 15px;
+    font-size: 12px;
+    color: #212121;
+}
+
+/* 회원가입/아이디찾기/비밀번호 */
+
+.login .login_find {
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+}
+
+.login .login_find * {
+    line-height: 1;
+}
+
+.login .login_find a {
+    color: #212121;
+    font-size: 12px;
+    padding: 0 15px;
+}
+
+.login .login_find li {
+    position: relative;
+}
+
+.login .login_find li:before {
+    width: 1px;
+    height: 11px;
+    display: block;
+    content: '';
+    background-color: #212121;
+    position: absolute;
+}
+
+.login .login_find li:first-child:before {
+    display: none;
+}
+
+/* SNS 로그인 (페이스북/ 페이코 / 네이버) */
+
+
+.login .sns_login_wrap {
+    background-color: #ffffff;
+    padding: 30px 15px 45px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #dfe1e5;
+}
+
+.login .sns_login_wrap .tit {
+    font-size: 17px;
+    color: #333333;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+.login .sns_login_wrap .sns_login {
+    display: flex;
+    justify-content: space-between;
+}
+
+.login .sns_login_wrap .sns_login li {
+    flex-grow: 1;
+    width: 0;
+}
+
+.login .sns_login_wrap .sns_login li img {
+    width: calc(100% - 10px);
+    max-width: 230px;
+    display: block;
+}
+
+/* 비회원 주문조회 */
+
+
+.login .guest_order_box {
+    background-color: #ffffff;
+    padding: 30px 15px 45px;
+}
+
+.login .guest_order_box fieldset legend {
+    display: none;
+}
+
+.login .guest_order_box .guest_txt {
+    margin-bottom: 8px;
+}
+
+.login .guest_order_box .guest_txt strong {
+    font-size: 17px;
+    color: #333333;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.login .guest_order_box .sub_txt {
+    color: #8b8b8b;
+    font-size: 13px;
+    line-height: 1;
+    margin-bottom: 15px;
+}
+
+.login .guest_order_box #orderNm,
+.login .guest_order_box #orderNo {
+    width: 100%;
+    display: block;
+    border: 1px solid #e5e5e5;
+    height: 45px;
+    border-radius: 3px;
+    padding: 0;
+    font-size: 13px;
+}
+
+.login .guest_order_box #orderNm {
+    margin-bottom: 10px;
+}
+
+.login .guest_order_box #orderNo {
+    margin-bottom: 15px;
+}
+
+.login .guest_order_box .member_login_order_btn:not(.bg) {
+    border: 1px solid #8769f0;
+    background-color: #ffffff;
+    color: #8769f0;
+}
+
+/*───────────────────────────────────────────────────────────
+
+	 HEADER
+
+───────────────────────────────────────────────────────────*/
+
+#header_wrap .box1 {
+	display: flex;
+	padding: 18px 15px 13px;
+	border-bottom: 1px solid #e6e6e6;
+}
+
+#header_wrap .box1 .left {
+	width: 30%;
+}
+
+#header_wrap .box1 .right {
+	width: 30%;
+	display: flex;
+	justify-content: right;
+}
+
+#header_wrap .box1 .logo {
+	width: 40%;
+	text-align: center;
+}
+
+#header_wrap .box1 .right .icon1 {
+	height: 22px;
+}
+
+#header_wrap .box1 .right .icon2 {
+	height: 22px;
+	margin-left: 17px;
+}
+
+#header_wrap .box1 .cart {
+	position: relative;
+	padding-bottom: 0 !important;
+}
+
+#header_wrap .box1 .cart .cart_cnt {
+	font-size: 12px;
+	font-weight: 600;
+	color: #ffffff;
+	display: block;
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 18px;
+	background-color: #8769f0;
+	position: absolute;
+	right: -10px;
+	top: -5px;
+}
+
+#header_wrap .box1 .left .open_side_menu {
+	width: 25px;
+	height: 20px;
+	border: 0;
+	background: url('img/menu.png') no-repeat center center;
+	background-size: cover;
+	vertical-align: middle;
+	margin-right: 22px;
+}
+
+#header_wrap .box1 .left .top_search {
+	width: 25px;
+	height: 20px;
+	background: url('img/search.png') no-repeat center center;
+	border: 0;
+	background-size: cover;
+	vertical-align: middle;
+}
+
+#header_wrap .box1 .logo img {
+	height: 34px;
+	vertical-align: middle;
+}
+
+#header_wrap .box1 #open_side_right {
+	cursor: pointer;
+}
+
+#header_wrap .page_location {
+	border-bottom: 1px solid #e7e7e7;
+	height: 50px;
+	position: relative;
+	text-align: center;
+	line-height: 49px;
+	font-size: 20px;
+	font-weight: 700;
+}
+
+#header_wrap .page_location .back {
+	background: url(img/back.png) no-repeat center center;
+	width: 44px;
+	height: 30px;
+	background-size: 13px;
+	position: absolute;
+	left: 0;
+	top: 9px;
+	cursor: pointer;
+}
+
+/*───────────────────────────────────────────────────────────
+
+	 FOOTER
+
+───────────────────────────────────────────────────────────*/
+
+#footer {
+	background-color: #f9f9f9;
+	padding: 25px 0 80px;
+	margin-top: 25px;
+}
+
+#footer .logo {
+	margin-bottom: 12px;
+}
+
+#footer .logo img {
+	width: 79px;
+	display: block;
+	margin: 0 auto;
+}
+
+#footer .center_phone {
+	border: 2px solid #2a2a2a;
+	border-radius: 20px;
+	text-align: center;
+	display: block;
+	height: 35px;
+	line-height: 35px;
+	font-size: 20px;
+	color: #2a2a2a;
+	font-weight: 800;
+	width: 190px;
+	margin: 0 auto 7px;
+}
+
+#footer .center_phone img {
+	height: 16px;
+	vertical-align: middle;
+	position: relative;
+	top: -1px;
+}
+
+#footer .bank_info {
+	text-align: center;
+	font-size: 12px;
+	color: #2a2a2a;
+}
+
+#footer .bank_info span {
+	font-size: 13px;
+	font-weight: 600;
+}
+
+#footer .business_info {
+	margin: 3px 0 8px;
+}
+
+#footer .business_info .tit {
+	text-align: center;
+	cursor: pointer;
+	margin-bottom: 8px;
+}
+
+#footer .business_info .tit>span {
+	color: #878787;
+	font-size: 12px;
+	font-weight: 600;
+	padding-right: 20px;
+	background: url('../img/markers/footer/more.png') no-repeat right center;
+	background-size: 15px;
+}
+
+#footer .business_info.on .tit>span {
+	background: url('../img/markers/footer/more_up.png') no-repeat right center;
+	background-size: 15px;
+}
+
+#footer .business_info .info {
+	background-color: #eeeeee;
+	padding: 13px;
+	display: none;
+}
+
+#footer .business_info.on .info {
+	display: block;
+}
+
+#footer .business_info dl {
+	display: flex;
+	font-size: 11px;
+	color: #878787;
+	width: calc(100% - 70px);
+	margin: 0 auto;
+}
+
+#footer .business_info dt {
+	width: 100px;
+}
+
+#footer .btn_licensee_info {
+	color: #878787;
+}
+
+#footer .links {
+	text-align: center;
+}
+
+#footer .links a {
+	font-size: 11px;
+	color: #878787;
+	border-left: 1px solid #878787;
+	padding: 0 11px;
+}
+
+#footer .links a:first-of-type {
+	border-left: 0;
+}
+
+/* 브랜드 검색 버튼 */
+.btn_nav_brand_search {
+	position: relative;
+	display: block;
+	padding-left: 15px;
+	margin: 8px 8px 0 8px;
+	;
+	height: 46px;
+	line-height: 46px;
+	color: #1c1c1c;
+	font-size: 16px;
+	font-weight: bold;
+	letter-spacing: -1px;
+	border: 1px solid #e6e6e6;
+}
+
+.btn_nav_brand_search:after {
+	position: absolute;
+	top: 17px;
+	right: 17px;
+	display: inline-block;
+	content: '';
+	width: 6.5px;
+	height: 12px;
+	background: url('../img/icon/icon_brand_arrow.png') no-repeat 0 0;
+	background-size: 6.5px 12px;
+}

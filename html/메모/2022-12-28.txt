@@ -1,0 +1,27 @@
+1. 내장 객체
+	- 브라우저 -> 크롬V8 -> 자바스크립트
+	- JavaScript Core
+		- 내장 생성자 객체
+			- Object, String, Array, Function 등
+
+		- 내장 객체
+			- Math, JSON 등
+
+		- 호스트 객체
+			- 브라우저 객체
+				- window
+					- location
+					- history
+					- screen
+					- navigator
+					- document
+
+	1) 내장 생성자
+	
+	2) 내장 객체
+	
+	3) 호스트 객체
+
+	4) 사용자 정의 객체
+
+2. 정규 표현식

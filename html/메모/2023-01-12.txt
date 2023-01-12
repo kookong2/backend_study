@@ -1,0 +1,36 @@
+DOM(Document Object Model)
+
+document
+1. 태그로 선택
+	document.getElemetsByTagName("태그명");
+
+2. 클래스 명으로 선택
+	document.getElementsByClassName("클래스명");
+
+3. 아이디 명으로 선택
+	document.getElementById("아이디명");
+
+4. name 속성으로 선택
+	document.getElementsByName("name 값");
+
+5. CSS 선택자로 선택
+	document.querySelector("css 선택자");
+		- 1 개만 선택
+	
+	document.querySelectorAll("css 선택자");
+		- 1 개만 선택
+
+document
+	.createElement("태그명");
+		- 메모리상 DOM 객체 생성
+	.createTextNode("텍스트");
+	
+	.children : 자식들
+	.parentElement : 바로 태그
+	.previousElementSibling : 바로 앞 태그
+	.nextElementSibiling : 바로 뒤 태그
+	.firstElementChild : 가장 첫 번째 자식
+	.lastElementChild : 가장 마지막 자식
+
+속성 추가, 변경, 삭제
+	.setAttribute("속성명", "값");

@@ -60,10 +60,11 @@ NULL : 데이터가 없는 경우 null
 
 	- CHECK(조건식)
 	
-	- FOREIGN KEY 컬럼명 REFERENCES 테이블명(기본키)
+	- FOREIGN KEY (컬럼명) REFERENCES 테이블명(기본키)
 		- ON DELETE CASCADE | SET NULL
 
 	- 외래키 제약조건 : 기본값 - 연관된 데이터 삭제 불가
+		- ON DELETE CASCADE : 부모 데이터가 삭제되면 자식 데이터도 삭제
 		
 
 SQL(Structured Query Language)

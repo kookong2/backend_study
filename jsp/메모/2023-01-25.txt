@@ -1,0 +1,122 @@
+Servlet & JSP1
+Servlet:자바에서 제공하는 웹을 구현하는 확장 기술 
+(요청(HttpServletRequest),응답(HttpServletResponse))
+
+개발환경 구축
+
+ 1. 이클립스 설치
+ 2. tomcat9 설치 및 설정
+ 3. 프로젝트 생성
+ 4. JSP 프로젝트 폴더 구조
+
+웹기초
+1.요청과 응답 이해하기
+  Request(요청- 웹브라우저)-->Response(응답- 서버)
+
+요청 전문
+    헤더(header)
+       -요청에 대한 정보(URL/요청방식- GET, POST)
+       -요청에 대한 환경 (언어, UserAgent(브라우저 정보), IP정보, 요청 body 데이터의 형식)
+          Content-type : -application/x-www-form-urlencoded;
+                                (바디-키=값&키=값...)
+                              -application/jason;
+                                  (바디-키=값&키=값...)
+
+       
+    바디(body)
+      - 전송할 데이터
+       - post 양식 데이터 - 비교적 많은 데이터 전송가능 
+       - 전송 파일 데이터
+
+응답 전문
+    헤더(header)
+       응답( body) 의 데이터 종류
+       응답상태...
+         2xx  200- 정상 응답,201-작성됨, 
+         3xx  301-영구이동,302-임시이동,304-캐시됨(브라우저 있는 데이터를 사용) 
+         4xx   Client(브라우저 쪽) 
+              400-잘못된 요청, 401-권한없음,403-금지됨,404-찾을 수 없음
+         5xx Server(서버) 
+             500-내부 서버 오류 (코드, 서버 자체 문제) 501-Bad Gatewat, 503- 서비스 사용할 수 없음, 504-유지보수 중...
+        - 응답 body 종류에 대한 정보
+            content type: text/html
+                -> 브라우저가 body의 데이터를 HTML형식으로 인식
+                ->DOM 객체생성
+         -브라우저 동작 통제
+            Location :주소 ; -> 브라우저에게 URL 이동
+            Set-Cookie : 키=값...
+            Regrexh:S
+            Content-Type:Content-Disposition;a...
+             -응답 데이터를 다운로드 동작
+  
+       
+    바디(body)
+    - 응답데이터 
+    text/html -> HTML  문자열 데이터 -> 브라우저가 DOM Tree
+
+  응답헤더 content-type : content-dispositon;-> 응답 body의 내용을 다운로드 해라 
+
+
+   
+
+
+2.HTTP 요청 메서드
+   1)GET
+   2)POST
+   3)PUT
+    4)PATCH
+   5)DELETE
+   6)OPTIONS
+      -요청시 통신 옵션을 설정하기 위한 용도  
+
+<요청방식>
+GET
+    -데이터 조회
+    - 브라우저에 조회 URL 데이터를 전송 함으로써 조회
+    
+    query(질의)   ?가있음 
+    querystring
+
+     조회용 데이터 -> URL?
+     요청 body는 비어있는 상태로 전송 
+     -DELETE (조회후 삭제 )
+
+POST
+    : 서버에 데이터 작성(전송)
+   -PUT : 전체변경(데이터의 치환)
+   -PATCH: 일부 데이터의 수정 
+
+
+OPTIONS
+    -요청 전에 통신 옵션 
+
+  
+
+3.HTTP(Hyper Text Transfer Protocol)
+HTTPS
+
+FTP
+SFTP
+SSH
+
+1.서블릿( Servlet)
+  HttpServlet 상속
+
+2.서블릿( Servlet) 클래스 작성하기
+
+3.web.xml 파일에 서블릿( Servlet)등록하기
+<web-app>
+  <servlet>
+      <servlet-name></servlet-name>
+      <servlet-class></servlet-class>
+       <servlet-mapping>
+            <servlet-name></servlet-name>
+            <url-pattern></url-pattern>
+       </servlet-mapping>
+  </servlet>
+</web-app>
+
+4. 웹 브라우저로 부터 데이터 입력받기
+
+HttpServletRequest
+ getParameter:요청 데이터 조회

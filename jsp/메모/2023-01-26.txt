@@ -1,0 +1,19 @@
+디렉티브 태그
+<%@
+1. page
+
+2. include
+	- jsp. html, text 서블릿 번역시에 추가
+
+3. taglib
+	- 태그 라이브러리 연동
+
+액션태그
+1. 액션태그의 종류
+2. forward 액션 태그
+3. include 액션 태그
+4 .param 액션 태그
+5. 자바빈즈 액션 태그
+6. useBean 액션 태그
+7. setProperty 액션 태그
+8. getProperty 액션 태그

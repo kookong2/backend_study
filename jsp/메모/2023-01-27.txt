@@ -19,9 +19,14 @@
 		include
 	
 	MVC 패턴
-		M - Model
-		V - view
-		C - Controller
+		M - Model : 비지니스 로직
+			- Service
+				- DAO(Data Access Object)
+				- DTO
+				- VO
+ 
+		V - view : 출력
+		C - Controller : 요청 --> Model -> View
 
 4 .param 액션 태그
 5. 자바빈즈 액션 태그

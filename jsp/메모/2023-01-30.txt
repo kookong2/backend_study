@@ -1,0 +1,113 @@
+JSP 내장객체
+1. 내장객체의 종류
+	- HttpServletRequest request
+	- HttpServletResponse response
+	- PageContext pageContext
+	- ServletConfig config
+	- ServletContext application
+	- HttpSession session
+
+2. 속성 처리 메서드의 종류
+	- pageContext
+	- request
+	- session
+	- application
+	
+	- Object getAttribute(String name)
+	- void setAttribute(String name, Object value);
+	- EL 식의 변수로 사용 가능
+		ex) ${name}
+
+3. request 내장 객체의 기능과 사용법
+	- 헤더값 조회
+	- 요청 데이터 조회
+	- String getParameter(String name);
+	- Map getParameterMap();
+	- Enumeration getParameterValues
+
+4. response 내장 객체의 기능과 사용법
+	- 헤더값 조회
+	- 헤더값 추가
+	- PrinterWriter getWriter()
+	- ServletOutputStream getOutputStream()
+
+5. out 내장 객체의 기능과 사용법
+	- JspWriter out (커스텀 태그 만들 때 사용)
+
+
+
+
+
+
+
+
+JDBC로 데이터 베이스와 JSP 연동
+	- JDBC API(Application Programming Interface)
+
+0. mysql driver 로딩
+	- Class.forName("...");
+
+1. DriverManeger
+	- 데이터 베이스 연결
+	- getConnection(String url)
+
+2. Connection
+	- Statement createStatement();
+
+3. Statement
+	- int excuteUpdate 
+		- 추가(INSERT), 수정(UPDATE), 삭제(DELETE) 
+		- 영향을 받은 레코드 개수
+
+	- ResultSet excuteQuery 
+		- 데이터 조회(SELECT)
+
+4. PreparedStatement
+	- ?, ?, ?
+
+	- set 자료형(순서, 값)
+	- int executeUpdate()
+	- ResultSet executeQuery();
+
+5. ResultSet
+	- boolean next() -> 다음 레코드 위치로 이동
+	- getInt -> 정수형 필드 데이터 조회
+	- getLong
+	- getDouble
+	- getFloat ...
+	- getString ...
+	- getDate -> 날짜
+	- getTime -> 시간
+	- getTimestamp -> 날짜, 시간
+
+6. CallableStatement
+
+
+
+
+
+
+MVC
+
+M(Model)	- 비지니스 로직을 처리
+		- Service (회원가입, 로그인)
+			- DAO (Data Access Object) - 직접 데이터 접근
+			- DTO (Data Transfer Object) - 데이터 전달 객체
+			- VO (Value Object)
+
+V(view)		- 보이는 화면
+
+C(Controller) 	- 요청과 응답 사이에서 뷰에서 유입된 요청
+			-> 적절한 Model을 조회 -> 결과 -> 응답
+
+
+
+
+
+
+
+
+
+
+
+

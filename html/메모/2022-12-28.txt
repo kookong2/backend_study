@@ -1,20 +1,35 @@
 1. 내장 객체
 	- 브라우저 -> 크롬V8 -> 자바스크립트
-	- JavaScript Core
+	- JavaScript Core (ECMAS Script ES6+)
 		- 내장 생성자 객체
 			- Object, String, Array, Function 등
 
 		- 내장 객체
 			- Math, JSON 등
 
-		- 호스트 객체
-			- 브라우저 객체
-				- window
-					- location
-					- history
-					- screen
-					- navigator
-					- document
+	- in  
+		- 객체의 속성이 있는지 체크 (연산자)
+		- 상속까지 고려해서 체크
+
+	- hasOwnProperty : 본인 객체만 속성 체크
+
+	- 객체의 속성 접근
+		1) 마침표 연산자(.)
+		2) 대괄호 연산자
+
+	- JSON
+		- .stringify() : 자바슼크립트 객체 -> JSON 문자열
+		- .parse() : JSON 문자열 -> 자바스크립트 객체
+
+2. 호스트 객체
+	- 브라우저 객체
+	- window
+		- location
+		- history
+		- screen
+		- navigator
+		- document
+
 
 	1) 내장 생성자
 	

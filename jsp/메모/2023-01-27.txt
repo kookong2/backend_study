@@ -1,0 +1,35 @@
+액션태그
+1. 액션태그의 종류
+2. forward 액션 태그
+	- forward : 페이지 이동이 아님
+	- 기존 출력 버퍼를 취소
+	- forward page에서 설정된 jsp 파일의 출력 결과를 버퍼담음
+	- 출력 -> 종료
+
+3. include 액션 태그
+	- 기존 버퍼를 유지
+	- include page 에 있는 출력 결과를 버퍼에 담고
+	- 남은 출력 버퍼를 담음
+	- 그리고 출력
+	
+	RequestDispatcher
+		HttpServletReqeust
+			.getRequestDispatcher
+		forward
+		include
+	
+	MVC 패턴
+		M - Model : 비지니스 로직
+			- Service
+				- DAO(Data Access Object)
+				- DTO
+				- VO
+ 
+		V - view : 출력
+		C - Controller : 요청 --> Model -> View
+
+4 .param 액션 태그
+5. 자바빈즈 액션 태그
+6. useBean 액션 태그
+7. setProperty 액션 태그
+8. getProperty 액션 태그

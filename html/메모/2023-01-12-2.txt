@@ -1,0 +1,60 @@
+1. HTML 요소의 위치
+	- 뷰포트좌표(Viewport -> 보이는 화면)
+		- window
+			스크롤바를 제외한
+			.innerWidth
+			.innerHeight
+
+			스크롤바를 포함한
+			.outerWidth
+			.outerHeight 
+
+	- 문서좌표
+		- window
+			스크롤한 위치
+			.pageXOffset
+			.pageYOffset
+
+
+	
+	- 문서 좌표 위치
+		- x : window.pageXOffset + rect.left;
+		- y : window.pageYOffset + rect.top;
+
+2. HTML 요소의 크기
+	- getBoundingClientRect()
+		- 요소의 뷰포트 위치
+			- top, left
+	
+	- clientWidth : 요소 너비
+	- clientHeight : 요소 높이
+
+3. 스크롤한 거리 구하기
+	- window
+		.pageXOffset
+		.pageYOffset
+
+4. 스크롤하기
+	- window
+		.scrollTo(x,y)
+		.scrollBy(x,y)
+
+5. 폼 요소와 폼 컨트롤 요소
+	- FormData
+
+6. CSS제어하기
+	- document
+		.style
+
+7. 클래스 속성 제어
+	.classList
+		.add
+		.remove
+		.toggle
+		.contains
+		
+
+
+
+
+

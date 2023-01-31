@@ -1,0 +1,69 @@
+싱글 쓰레드
+	- 비동기 처리
+	- 무거운 작업, 동시 진행작업 -> 백그라운드(코어) 위임해서 처리
+		-> 작업완료 -> 이벤트 발생
+
+setTimeout(function(){
+	// 지연실행
+}, 1000);
+	
+
+1. Promise
+	- 비동기 순차 처리 구조 개선
+	new Promise(funcion(resolve, reject){
+		
+	});
+
+	- resolve : 성공 데이터를 넘겨주기 위한 함수
+	- reject : 실패 데이터를 넘겨주기 위한 함수
+
+	promise 객체
+		- .then(function(data){		// data - resolve 넘겨준 데이터
+			
+		});
+		
+		- .catch(function(err){		// err - reject 넘겨준 데이터
+
+		});
+
+		콜백 지옥 -> 위 -> 아래 개선 -> 여전히 복잡
+
+		async ~ await
+			- 반환값 : then에 유입되는 data
+			- catch -> try ~ catch(err){}
+
+	
+2. XMLHttpRequest
+(Ajax -> Asynchronous javascript and XML)
+	- 페이지를 새로고침 없이 교체하는 기술
+	- 비동기 방식
+
+XMLHttpRequest
+	- .open("GET|POST", url);
+	- send(body 데이터)
+
+
+
+3. FileReader
+
+4. 드래그앤 드롭 구현하기
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

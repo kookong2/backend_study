@@ -1,0 +1,9 @@
+디렉티브 태그
+<%@
+1. page
+
+2. include
+	- jsp. html, text 서블릿 번역시에 추가
+
+3. taglib
+	- 태그 라이브러리 연동

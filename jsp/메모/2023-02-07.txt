@@ -1,0 +1,60 @@
+ 커스텀 액션
+1. 커스텀 액션을 만드는 방법
+	- tag / page
+		- 
+		- import
+	- 클래스 SimpleTag
+
+내장객체
+	- HttpServletRequest request
+	- HttpServletResponse response
+	- HttpSession session
+	- ServletContext application
+	- ServletConfig config
+	- JspWriter out
+	- JspContext jspContext
+
+2. 태그파일을 이용해서 커스텀 액션 만들기
+	- attribute -> 속성 추가
+		- name : 태그에서 입력하는 속성 명
+		- type : 자료형 / 없는 경우는 기본 값이 문자형 자료
+		- required : ture -> 필수 속성
+	
+	- body-content
+		1) empty
+			- 단일 태그 -> 태그 자체에서 출력
+
+		2) scriptless
+			- 자바코드를 제외한, 텍스트, EL식 태그 안에
+			포함할 수 있는 형태
+
+		3) tagdependent
+			- 택스트 태그 안에 사용할 수 있다.
+	
+		- java.time
+			- Temporal, TemporalAccessor, TemporalAdjustor
+				- LocalDate
+				- LocalTime
+				- LocalDateTime
+				- ZonedDateTime
+				- OffsetDateTime
+				- Instant..
+
+		- DateTimeFormatter
+			- foramt
+
+		- variable -> EL 변수
+			- scope = "AT_End|NESTED|AT_BEGIN|
+
+			- rtexprvalue -> true  / EL 변수 값으로 사용 가능
+				     -> false / EL 변수 x 
+
+	
+3. 태그 클래스를 이용해서 커스텀 액션 만들기
+
+4. 커스텀 액션 태그를 이용하여 레이아웃 구성하기
+
+
+
+
+

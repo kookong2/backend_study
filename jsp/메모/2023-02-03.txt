@@ -1,0 +1,36 @@
+데이터 이름 하나로만 구성된 EL 식
+${변수, 연산식}
+1. JSP/서블릿 기술에서 사용되는 네 종류의 애트리뷰트
+	- PageContext pageContext
+	- HttpServletRequest request
+	- HttpSession session
+	- ServletContext application
+		void setAttribute(Object key, Object value) : 속성값 지정
+		Object getAttribute(Object key) : 속성값 조회
+		void removeAttribute(Object key) : 속성값 제거
+
+pageContext -> page
+page.num, page['num']
+
+2. EL 식 안에 있는 데이터 이름이 해석되는 순서
+	- 적용 범위가 좁을 수록 먼저 해석
+		- pageContext < request < session < application
+
+익스프레션 언어의 내장 객체
+	- param
+	- paramValues
+	- headers
+
+getter 메서드는 get을 제외한 이름으로 접근 가능
+	pageContext
+		- getResponse -> ${pageContext.response}
+
+익스프레션 언어의 연산자
+1. 익스프레션 언어의 연산자
+
+2. 엠티 연산자
+
+3. 대괄호 연산자와 마침표 연산자
+	.[...]
+
+initParam -> 서블릿 설정값, 필터 설정값

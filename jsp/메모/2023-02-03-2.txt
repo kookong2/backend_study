@@ -1,0 +1,87 @@
+JSTL
+코어(core) 라이브러리
+http://java.sun.com/jsp/jstl/core
+
+1. <c:set> : EL 변수 지정
+	- 기본적으로 pageContext의 속성으로 등록
+	scope
+		- page (pageContext)
+		- request
+		- session
+		- application
+
+			.setAttribute
+			.getAttribute
+			.removeAttribute
+
+2. <c:remove>
+	- 등록된 값을 삭제
+	scope : 범위에 있는 값만 삭제
+
+3. <c:if>
+	test="${조건식}"
+
+4. <c:choose>
+	- 다중 조건문
+	- switch case
+		<c:when test="${조건문}">
+		<c:otherwise>
+
+5. <c:forEach>
+	- 배열
+	- java.util.Collection
+	- java.util.Map
+	- java.util.Iterator
+	- java.util.Enumeration
+		
+		var
+		begin : 시작 번호
+		end : 종료 번호
+		step : 건너 뛰는 수
+		
+		items
+		varStatus 
+			- 반복 상태
+			- index : 0번부터 시작하는 순서
+			- count : 1번부터 시작하는 순서
+			- current : 반복하는 현재 요소
+			- first : 첫 번째
+			- last : 마지막 번째
+		
+6. <c:forTokens>
+	- items : 문자열
+	- delims : 구분값 -> 반복
+
+7. <c:catch>
+	
+8. <c:redirect>
+9. <c:import>
+10.<c:url>
+11.<c:out>
+
+포멧(fmt) 라이브러리
+http:java.sun.com/jsp/jstl/fmt
+	- 날짜, 숫자 -> 형식화
+	- 통화, 숫자 표기 -> 지역화
+	- 다국어 지원
+
+
+1. fmt:formatDate
+	- type="date"
+		- dateStyle="long|short|full"
+
+	- type="time"
+		- timeStyle="long|shrot|full"
+
+	- type="both"
+
+2. fmt:formatNumber
+	- DecimalFormat
+
+3. fmt:timeZone과 fmt:setTimeZone
+4. fmt:setBundle과 fmt:bundle, fmt:message
+5. <fmt:requestEncoding value="utf-8"/>
+
+함수(function) 라이브러리
+http://java.sun.com/jsp/jstl/funtions
+	- 문자열 가공

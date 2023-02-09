@@ -1,0 +1,55 @@
+마이바티스(mybatis) 프레임워크 설치 및 적용
+1. 설치
+	- 커넥션 풀
+	
+	MemberMapper.update
+
+2. 설정
+
+3. 적용
+
+
+트랜잭션 -> SQL 실행단위
+	- 1개 SQL을 한 개의 트랜잭션 단위로 실행
+	
+	- 연속되는 3개의 SQL을 한개의 트랜잭션으로 변경
+		- 쿼리 실패 -> 전채 쿼리 취소
+
+SqlSession
+	- insert
+	- update
+	- slectList
+	- slectOne
+	- delete
+
+
+
+
+코드
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+  <properties>
+	  <property name="hostname" value="localhost" />
+      <property name="driver" value="com.mysql.cj.jdbc.Driver" />
+      <property name="url" value="jdbc:mysql://localhost:3306/jsp_board" />
+      <property name="username" value="root" />
+      <property name="password" value="aA!123456" />
+  </properties>
+  <environments default="development">
+    <environment id="development">
+      <transactionManager type="JDBC"/>
+      <dataSource type="POOLED">
+        <property name="driver" value="${driver}"/>
+        <property name="url" value="${url}"/>
+        <property name="username" value="${username}"/>
+        <property name="password" value="${password}"/>
+      </dataSource>
+    </environment>
+  </environments>
+  <mappers>
+	<mapper resource="kr/codefty/board/mapper/MemberMapper.xml" />
+  </mappers>
+</configuration>

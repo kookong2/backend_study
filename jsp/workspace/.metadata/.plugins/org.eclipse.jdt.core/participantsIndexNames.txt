@@ -13,6 +13,12 @@ C:\Users\82107\Desktop\backend_study\jsp\workspace\.metadata\.plugins\org.eclips
 \kanban\src\main\java
 C:\Users\82107\Desktop\backend_study\jsp\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3932002746.index
 \day02\src\main\java
+C:\Users\82107\Desktop\backend_study\jsp\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\928799292.index
+\jsp2_day03\src\main\java
+C:\Users\82107\Desktop\backend_study\jsp\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4115582003.index
+\jsp2_day04\src\main\java
+C:\Users\82107\Desktop\backend_study\jsp\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\399386231.index
+\jsp2_day04\src\main\java
 C:\Users\82107\Desktop\backend_study\jsp\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\329969393.index
 \day01\src\main\java
 C:\Users\82107\Desktop\backend_study\jsp\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1076934005.index

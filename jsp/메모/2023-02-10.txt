@@ -1,0 +1,29 @@
+필터와 래퍼
+
+1. 필터 클래스, 필터 객체, 필터
+HttpFilter 
+	doFilter
+
+
+2. 필터가 위치하는 곳
+
+3. 필터 클래스의 작성, 설치, 등록
+	- 필터 체인(filter chain)
+	FilterEx1 -> 실행         -> FilterEx2(다음 필터)     ... 필터가 더이상 없으면 -> Servlet 클래스 실행 
+		                 doFilter                              ->   doFilter    
+ 	
+	
+	- 필터 클래스의 init 메서드와 destroy 메서드
+	- <dispatcher>
+		- REQUEST : 웹 브라우저에 의한 호출
+		- FORWARD : forward 메서드에 의한 호출
+		- INCLUDE : include 메서드에 의한 호출
+		- ERROR : 에러 발생에 의한 호출
+		
+래퍼 클래스 작성 및 적용하기
+	- HttpServletRequestWrapper
+		- HttpServletRequest 인터페이스를 기본 구현해 놓은 래퍼 클래스
+		
+	- HttpServletResponseWrapper
+		- HttpServletResponse 인터페이스를 기본 구현해 놓은 래퍼 클래스 
+	

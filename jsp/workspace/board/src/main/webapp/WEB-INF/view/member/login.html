@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+		xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+		layout:decorate="~{layouts/main}">
+	<main layout:fragment="content">
+		<h1 class="main_tit" th:text="${siteTitle}"></h1>
+		<form method="post" th:action="@{/member/login}" th:object="${loginCommand}">
+			<div class="error" th:each="err : ${#fields.globalErrors()}" th:text="${err}"></div>
+			
+			<input type="text" name="userId" th:field="*{userId}" placeholder="아이디 입력">
+			<div class="error" th:each="err : ${#fields.errors('userId')}" th:text="${err}"></div>
+			
+			<input type="password" name="userPw" th:field="*{userPw}" placeholder="비밀번호 입력">
+			<div class="error" th:each="err : ${#fields.errors('userPw')}" th:text="${err}"></div>
+			
+			<div class='btns'>
+				<button type="submit">로그인</button>
+			</div>
+		</form>
+ 	</main>
+</html>

@@ -1,17 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ page import="javax.servlet.http.*" %>
+<%@page contentType="text/html;charset=utf-8" %>
+<%@page isErrorPage="true" %> <%--내장객체 exception --%>
 <%
-	Cookie cookie1 = new Cookie("key1", "value1");
-	response.addCookie(cookie1);
+	exception.printStackTrace();
 %>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
-	
-</body>
-</html>

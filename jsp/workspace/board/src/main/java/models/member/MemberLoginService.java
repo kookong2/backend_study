@@ -1,41 +1,45 @@
 package models.member;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import javax.servlet.http.HttpServletRequest;
 
-import javax.servlet.http.HttpSession;
-
-import org.mindrot.bcrypt.BCrypt;
-
-import controllers.members.LoginCommand;
-
-@Service
+/**
+ * 로그인 기능
+ * @author LG
+ *
+ */
 public class MemberLoginService {
-	
-	@Autowired
 	private MemberDao memberDao;
+	private MemberLoginValidator validator;
 	
-	@Autowired
-	private HttpSession session;
-	
-	public void process(LoginCommand loginCommand) {
-		String userId = loginCommand.getUserId();
-		String userPw = loginCommand.getUserPw();
-		String message = "아이디 또는 비밀번호가 일치하지 않습니다.";
-		
-		/** 1. 아이디로 검색되는 회원이 있는지? */
-		Member member = memberDao.get(userId);
-		if (member == null) {
-			throw new RuntimeException(message);
-		}
-		
-		/** 2. 회원이 있다면? 비밀번호가 일치하는 지 체크 */
-		boolean matched = BCrypt.checkpw(userPw, member.getUserPw());
-		if (!matched) {
-			throw new RuntimeException(message);
-		}
-		
-		/** 3. 비밀번호가 일치하면? 세션에 회원정보 저장 */
-		session.setAttribute("member", member);
+	public MemberLoginService(MemberDao memberDao, MemberLoginValidator validator) {
+		this.memberDao = memberDao;
+		this.validator = validator;
 	}
+	
+	/**
+	 *  로그인 기능 
+	 * 
+	 * 	유효성 검사
+	 *  1. 필수 항목 체크(유효성 검사 - userId, userPw)
+	 *  2. userId로 회원이 있는지 체크
+	 *  3. 회원이 있다면 비밀번호 검증
+	 *  
+	 *  로그인 처리
+	 *  4. 비밀번호가 검증 완료된 경우 로그인 처리(HttpSession)
+	 *  5. 아이디 저장이 있거나 없는 경우 처리
+	 *  	- 아이디 저장이 있는 경우 -> 쿠키에 등록(365일 - 만료시간)
+	 *  	- 아이디 저장이 없는 경우 -> 쿠키 삭제
+	 */
+	
+	public void doLogin(HttpServletRequest request) {
+		// 유효성 검사
+		Member member = new Member();
+		member.setUserId(request.getParameter("userId"));
+		member.setUserPw(request.getParameter("userPw"));
+		
+		if(validator != null) {
+			validator.check(member);
+		}
+	}
+
 }

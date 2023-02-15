@@ -1,0 +1,12 @@
+package models.member;
+
+public class JoinFailException  extends RuntimeException{
+
+	public JoinFailException() {
+		super("회원 가입 실패하였습니다.");
+	}
+	
+	public JoinFailException(String message) {
+		super(message);
+	}
+}

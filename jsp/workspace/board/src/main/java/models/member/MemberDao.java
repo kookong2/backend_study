@@ -1,80 +1,78 @@
 package models.member;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.RowMapper;
-import org.springframework.stereotype.Component;
+import commons.db.QueryExecutor;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Timestamp;
-import java.time.LocalDateTime;
-
-import org.mindrot.bcrypt.BCrypt;
-
-@Component
+/**
+ * @author LG
+ * MemberDAO(Date Access Object)
+ * 데이터 접근 할 수 있는 기능 
+ */
 public class MemberDao {
 	
-	@Autowired
-	private JdbcTemplate jdbcTemplate;
-	// update, query
+	private QueryExecutor qe;
 	
-	
+	public MemberDao() {
+		qe = new QueryExecutor();
+	}
+
 	/**
-	 * 회원 가입 처리 
-	 * 
+	 * 회원정보 DB 추가
+	 * @param {Member}member: 회원가입 정보
+	 * @return {boolean}
+	 */
+	public boolean register(Member member) {
+		int cnt = qe.insert(member,"MemberMapper.insert");
+		return cnt > 0;
+	}
+	/**
+	 * 회원정보 수정
 	 * @param member
 	 * @return
 	 */
-	public boolean register(Member member) {
+	public boolean update(Member member) {
 		
-		String userPw = member.getUserPw();
-		userPw = BCrypt.hashpw(userPw, BCrypt.gensalt(12));
-		
-		String sql = "INSERT INTO member (userId, userPw, userNm, email) " +
-							" VALUES (?, ?, ?, ?)";
-		
-		int cnt = jdbcTemplate.update(sql, member.getUserId(),
-							userPw, member.getUserNm(), member.getEmail());
-		
-		return cnt > 0;
+		int cnt = qe.update(member, "MemberMapper.update");
+		return false;
 	}
 	
 	/**
-	 * 아이디로 회원조회 
+	 * 회원 정보 삭제
+	 * @param member
+	 * @return
+	 */
+	public boolean delete(Member member) {
+		int cnt = qe.delete(member,"MemberMapper.delete");
+		return false;
+	}
+	
+	/**
+	 * 회원정보를 아이디로 조회
+	 * @param useId
+	 * @return
+	 */
+	public Member get(String userId) {
+		
+		Member params=new Member();
+		params.setUserId(userId);
+		
+		Member member= qe.queryOne(params,"MemberMapper.member");
+		
+		return member;
+	}
+	
+	/**
+	 * 회원 등록 여부 체크
 	 * 
 	 * @param userId
 	 * @return
 	 */
-	public Member get(String userId) {
-		String sql = "SELECT * FROM member WHERE userId = ?";
-		Member member = null;
-		try {
-			 member = jdbcTemplate.queryForObject(sql, new RowMapper<Member>() {
-
-				@Override
-				public Member mapRow(ResultSet rs, int rowNum) throws SQLException {
-
-					Timestamp _modDt = rs.getTimestamp("modDt");
-					LocalDateTime modDt = _modDt == null ? null : _modDt.toLocalDateTime();
-					
-					Member member = new Member();
-					member.setUserNo(rs.getInt("userNo"));
-					member.setUserId(rs.getString("userId"));
-					member.setUserPw(rs.getString("userPw"));
-					member.setUserNm(rs.getString("userNm"));
-					member.setEmail(rs.getString("email"));
-					member.setUserType(MemberType.valueOf(rs.getString("userType")));
-					member.setRegDt(rs.getTimestamp("regDt").toLocalDateTime());
-					member.setModDt(modDt);
-					
-					return member;
-				}
-			}, userId);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+	public boolean isExists(String userId) {
+		Member params = new Member();
+		params.setUserId(userId);
 		
-		return member;
+		int cnt = qe.count(params, "MemberMapper.count");
+		
+		return cnt > 0;
 	}
+	
 }

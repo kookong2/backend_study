@@ -1,60 +1,56 @@
 package controllers.members;
 
-import javax.validation.Valid;
+import java.io.IOException;
+import static commons.MessageLibrary.*;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.validation.Errors;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
-import models.member.Member;
 import models.member.MemberJoinService;
+import models.member.MemberServiceManager;
 
-// /member/join - get - 양식, post - 회원가입 
-@Controller
-@RequestMapping("/member/join")
-public class MemberJoinController {
-	
-	@Autowired
-	private MemberJoinValidator validator;
-	
-	@Autowired
-	private MemberJoinService service;
-	
-	@GetMapping
-	public String join(Model model) {
+@WebServlet("/member/join")
+public class MemberJoinController extends HttpServlet {
+
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		String[] addCss= {"testcss1","test/testcss2"};
+		req.setAttribute("addCss", addCss);
 		
-		Member member = new Member();
-		model.addAttribute("member", member);
-		model.addAttribute("siteTitle", "회원가입");
+		String[] addScript = {"testjs1","test/testjs2"};
+		req.setAttribute("addScript", addScript);
 		
-		return "member/join";
+		RequestDispatcher rd=req.getRequestDispatcher("/member/join.jsp");
+		rd.forward(req, resp);
 	}
-	
-	@PostMapping
-	public String joinPs(@Valid Member member , Errors errors, Model model) {
-		
-		model.addAttribute("siteTitle", "회원가입");
+
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
 		try {
-			service.process(member, errors);
-		} catch (RuntimeException e) {
+			MemberServiceManager serviceManager = MemberServiceManager.getInstance();
+			MemberJoinService service = serviceManager.getMemberJoinService();
+			service.doJoin(req);
+			
+			// 성공 -> 로그인 페이지로 이동 req.getContextPath() -> /board
+			String url = req.getContextPath() + "/member/login";
+			go(resp, url,"parent");
+			
+			
+		}catch(RuntimeException e) {
+			
 			e.printStackTrace();
-			String message = e.getMessage();
-			// Bean Validation, Validator에서 발생한 예외가 아닐때
-			if (!message.equals("common")) { 
-				 errors.reject("memberJoinFail", message);
-			}
+			
+			// 회원가입 실패, 오류 -> 자바스크립트 alert 메세지로 출력
+			alertError(resp, e);
+			
+			
 		}
-		
-		if (errors.hasErrors()) { // 에러 있을 경우는 가입 양식에 오류 메세지 출력 
-			return "member/join";
-		}
-		
-		// 회원 가입 성공
-		return "redirect:/member/login";
 	}
+	
+	
 }

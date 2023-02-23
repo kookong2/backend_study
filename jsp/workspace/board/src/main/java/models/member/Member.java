@@ -3,26 +3,17 @@ package models.member;
 import java.time.LocalDateTime;
 
 public class Member {
-
 	private int userNo;
 	private String userId;
 	private String userPw;
-	private String userNm;
 	private String userPwRe;
+	private String userNm;
 	private String mobile;
-	private boolean agree;			// 약관 동의
+	private String userType; // MEMBER - 일반회원, ADMIN - 관리자 
+	private boolean agree; // 약관동의 
 	private LocalDateTime regDt;
 	private LocalDateTime modDt;
 	
-	
-	public boolean isAgree() {
-		return agree;
-	}
-
-	public void setAgree(boolean agree) {
-		this.agree = agree;
-	}
-
 	public int getUserNo() {
 		return userNo;
 	}
@@ -58,7 +49,6 @@ public class Member {
 	public String getUserNm() {
 		return userNm;
 	}
-	
 	public void setUserNm(String userNm) {
 		this.userNm = userNm;
 	}
@@ -71,6 +61,23 @@ public class Member {
 		this.mobile = mobile;
 	}
 	
+		
+	public String getUserType() {
+		return userType;
+	}
+
+	public void setUserType(String userType) {
+		this.userType = userType;
+	}
+
+	public boolean isAgree() {
+		return agree;
+	}
+
+	public void setAgree(boolean agree) {
+		this.agree = agree;
+	}
+
 	public LocalDateTime getRegDt() {
 		return regDt;
 	}
@@ -86,12 +93,10 @@ public class Member {
 	public void setModDt(LocalDateTime modDt) {
 		this.modDt = modDt;
 	}
-	
+
 	@Override
 	public String toString() {
-		return "Member [userNo=" + userNo + ", userId=" + userId + ", userPw=" + userPw + ", userNm=" + userNm
-				+ ", mobile=" + mobile + ", regDt=" + regDt + ", modDt=" + modDt + "]";
+		return "Member [userNo=" + userNo + ", userId=" + userId + ", userPw=" + userPw + ", userPwRe=" + userPwRe
+				+ ", userNm=" + userNm + ", mobile=" + mobile + ", regDt=" + regDt + ", modDt=" + modDt + "]";
 	}
-	
-	
 }

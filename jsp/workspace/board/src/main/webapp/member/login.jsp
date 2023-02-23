@@ -1,38 +1,37 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page contentType="text/html; charset=utf-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="layout" tagdir="/WEB-INF/tags/layouts" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<fmt:setBundle basename="messages.common"/>
-<fmt:message var="siteTitle" key="member.logintitle"/>
-<c:url var="action" value="/member/login"/>
+<%@ taglib prefix="layout" tagdir="/WEB-INF/tags/layouts" %>
+<fmt:setBundle basename="messages.common" />
+<fmt:message var="siteTitle" key="member.logintitle" />
+<c:url var="action" value="/member/login" />
 <layout:main siteTitle="${siteTitle}">
 	<h1>${siteTitle}</h1>
 	<form method="post" action="${action}" target="ifrmProcess" autocomplete="off">
 		<dl>
 			<dt>
-				<fmt:message key="userId"/>
+				<fmt:message key="userId" />
 			</dt>
 			<dd>
-				<input type="text" name="userId">
+ 				<input type="text" name="userId" value="${cookie.saveId.value}">
 			</dd>
 		</dl>
 		<dl>
 			<dt>
-				<fmt:message key="userPw"/>
+				<fmt:message key="userPw" />
 			</dt>
 			<dd>
 				<input type="password" name="userPw">
 			</dd>
 		</dl>
 		<div>
-			<input type="checkbox" name="saveId" value="1" id="saveId">
+			<input  type="checkbox" name="saveId" value="1" id="saveId"${cookie.saveId.value == null ? '' : ' checked' }>
 			<label for="saveId">
-				<fmt:message key="member.saveId"/>
+				<fmt:message key="member.saveId" />
 			</label>
 		</div>
 		<button type="submit">
-			<fmt:message key="member.login"/>
+			 <fmt:message key="member.login" />
 		</button>
 	</form>
 </layout:main>

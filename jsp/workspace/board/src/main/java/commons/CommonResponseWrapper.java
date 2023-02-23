@@ -10,25 +10,26 @@ public class CommonResponseWrapper extends HttpServletResponseWrapper {
 
 	public CommonResponseWrapper(HttpServletResponse response) {
 		super(response);
-
-		// 응답시 공통 기능
+		
+		// 응답시 공통 기능 
+		
 	}
-
+	/**
 	@Override
 	public void addCookie(Cookie cookie) {
-		Cookie cookie2=cookie;
+		Cookie cookie2 = cookie;
 		if (cookie != null) {
 			try {
 				int hash = Objects.hash(cookie.getName());
 				String name = String.valueOf(hash);
 				String value = AES256.encrypt(cookie.getValue());
-				cookie2=new Cookie(name,value);
+				cookie2 = new Cookie(name, value);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-
 		}
-		super.addCookie(cookie);
+		
+		super.addCookie(cookie2);
 	}
-
+	*/
 }

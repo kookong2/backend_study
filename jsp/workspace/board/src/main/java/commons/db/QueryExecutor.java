@@ -6,70 +6,79 @@ import org.apache.ibatis.session.SqlSession;
 
 import config.MyConnection;
 
-public class QueryExecutor implements SelectQuery,InsertQuery,UpdateQuery,DeleteQuery {
-
-	private SqlSession session =null; 
+public class QueryExecutor implements SelectQuery, InsertQuery, UpdateQuery, DeleteQuery {
+	
+	private SqlSession session = null;
 	
 	@Override
-	public <T> int delete(T t,String mapper) {
+	public <T> int delete(T t, String mapper) {
+		
 		session = getSession();
-		int cnt = t == null?session.delete(mapper) : session.delete(mapper,t);
-		session.commit();
-		return cnt;
-	}
-
-	@Override
-	public <T> int update(T t,String mapper) {
-		session = getSession();
-		int cnt = t == null ? session.update(mapper) : session.update(mapper,t);
+		int cnt = t == null?session.delete(mapper):session.delete(mapper, t);
 		session.commit();
 		
 		return cnt;
 	}
 
 	@Override
-	public <T> int insert(T t,String mapper) {
+	public <T> int update(T t, String mapper) {
+		
 		session = getSession();
-		int cnt = t == null?session.insert(mapper):session.insert(mapper,t);
+		int cnt = t == null ? session.update(mapper):session.update(mapper, t);
 		session.commit();
+		
 		return cnt;
 	}
 
 	@Override
-	public <T, R> List<R> query(T t,String mapper) {
+	public <T> int insert(T t, String mapper) {
+		
 		session = getSession();
-		List<R> list = session.selectList(mapper,t);
+		int cnt = t == null ? session.insert(mapper):session.insert(mapper, t);
 		session.commit();
-		return null;
+		
+		return cnt;
 	}
 
+	@Override
+	public <T, R> List<R> query(T t, String mapper) {
+		
+		session = getSession();
+		List<R> list = session.selectList(mapper, t);
+		
+		return list;
+	}
+	
 	@Override
 	public <R> List<R> query(String mapper) {
 		session = getSession();
+		List<R> list = session.selectList(mapper);
 		
-		List<R>	list = session.selectList(mapper);
-		
-		return null;
+		return list;
 	}
-
+	
 	@Override
-	public <T, R> R queryOne(T t,String mapper) {
+	public <T, R> R queryOne(T t, String mapper) {
 		session = getSession();
-		R data = session.selectOne(mapper,t);
+		R data = session.selectOne(mapper, t);
+		
 		return data;
 	}
 	
 	@Override
 	public <R> R queryOne(String mapper) {
 		session = getSession();
+		
 		R data = session.selectOne(mapper);
+		
 		return data;
 	}
-
+	
 	public SqlSession getSession() {
-		if(session==null) {
-			session=MyConnection.getSession();;
+		if (session == null) {
+			session = MyConnection.getSession();
 		}
+		
 		return session;
 	}
 
@@ -81,7 +90,7 @@ public class QueryExecutor implements SelectQuery,InsertQuery,UpdateQuery,Delete
 		return cnt;
 	}
 
-
 	
+
 	
 }

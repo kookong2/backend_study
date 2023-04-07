@@ -1,0 +1,24 @@
+엔티티란?
+	- 데이터베이스의 테이블에 대응하는 클래스 (DTO)
+	- @Entity가 붙은 클래스는 JPA에서 관리함
+	- Lombok 애노테이션을 이용하면 getter, setter, toString 등을 자동으로 만들어주기 때문에 편함
+
+엔티티 클래스
+	- @Entity 어노테이션은 클래스 상단에 입력하면 JPA에 엔티티 클래스라는 것을 알려줌
+	- Entity 클래스는 반드시 기본키를 가져야 함
+		-> @Id 어노테이션을 이용해 기본키로 설정
+
+	- @GeneratedValue 어노테이션을 통한 기본키를 생성하는 전략은 총 4가지
+		- GenerationType.AUTO(default) : JPA 구현체가 자동으로 생성 전략 결정
+			- JPA 구현체가 IDENTITY, SEQUENCE, TABLE 생성 전략 중 하나를 자동으로 선택
+			- 데이터베이스가 변경되더라도 코드를 수정할 필요가 없음
+
+		- GenerationType.IDENTITY : 기본키 생성을 데이터베이스에 위임
+					 MySql 데이터베이스의 경우 AUTO_INCREMENT를 사용하여 기본키 생성
+
+		- GenerationType.SEQUENCE : 데이터베이스 시퀀스 오브젝트를 이용한 기본키 생성
+					@SequenceGenerator를 사용하여 시퀀스 등록 필요
+
+		- GenerationType.TABLE : 	키 생성용 테이블 사용. @TableGenerator 필요
+
+	

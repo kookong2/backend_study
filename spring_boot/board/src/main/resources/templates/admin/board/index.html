@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="~{layouts/admin}" lang="ko">
+    <section layout:fragment="content">
+        <nav class="sub_menus" th:replace="~{admin/board/_submenu::menus}"></nav>
+    </section>
+</html>

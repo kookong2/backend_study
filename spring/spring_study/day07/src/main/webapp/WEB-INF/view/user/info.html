@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>연습!</title>
+</head>
+<body>
+	<th:block th:text="${title}"></th:block>
+	<th:block th:object="${member}">
+		<dl>
+			<dt th:text="#{user.userId}"></dt>
+			<dd th:text="*{userId}"></dd>
+		</dl>
+		<dl>
+			<dt th:text="#{user.userNm}"></dt>
+			<dd th:text="*{userNm}"></dd>
+		</dl>
+		<dl>
+			<dt>가입일시</dt>
+			<dd th:text="*{#temporals.format(regDt, 'yyyy.MM.dd')}"></dd>
+		</dl>
+	</th:block>
+</body>
+</html>

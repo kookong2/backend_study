@@ -1,0 +1,21 @@
+HandlerInterceptor 인터페이스를 사용하면 세 시점에 공통 기능을 넣을 수 있다.
+	- 컨트롤러(핸들러) 실행 전
+	- 컨트롤러(핸들러) 실행 후, 아직 뷰를 실행하기 전
+	- 뷰를 실행한 이후
+
+HandlerInterceptor 인터페이스가 정의한 메서드
+	- boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) 
+		throws Exception;
+
+	- void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView 			modelAndView) throws Exception;
+
+	- void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception 			ex) throws Exception;
+
+	- preHandle() 메서드 (리턴 타입 boolean)
+		- 컨트롤러 객체를 실행하기 전에 필요한 기능을 구현할 때 사용
+		- handler 파라미터는 웹 요청을 처리할 컨트롤러 객체
+		- 로그인 하지 않은 경우 컨트롤러를 실행하지 않게 할 수 있음
+		- 컨트롤러를 실행하기 전에 컨트롤러에서 필요로 하는 정보를 생성할 수 있음
+	
+	- afterCompletion() 메서드
+		- 뷰가 클라이언트에 응답을 전송한 뒤에 실행

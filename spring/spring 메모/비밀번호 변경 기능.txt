@@ -1,0 +1,13 @@
+비밀번호 변경 기능 구현
+
+비밀번호 변경 기능을 위한 코드
+	- ChangePwdCommand
+	- ChangePwdCommandValidator
+	- ChangePwdController
+	- changePwdForm.jsp
+	- label.properties에 메시지 추가
+	- ControllerConfig 설정 클래스에 빈 설정 추가
+
+1. 비밀번호 변경에 사용 할 커맨드 객체와 Validator 클래스를 작성
+	- 비밀번호를 변경할 때 현재 비밀번호와 새 비밀번호를 입력 받도록 구현
+		-> currentPassword와 newPassword의 두 가지 파라미터 필요		

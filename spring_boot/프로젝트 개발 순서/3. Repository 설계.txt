@@ -1,0 +1,42 @@
+Repository 설계 이유
+	- JPA를 사용하기 위해 엔티티 매니저 (DAO)를 이용해 엔티티를 저장했지만, Spring Data JPA에서는
+	엔티티 메니저를 직접 이용해 코드를 작성하지 않아도 됨
+	
+	- Data Access Object의 역할을 하는 Repository 인터페이스를 설계하고 사용하는 것으로 충분
+	
+	- Spring Data JPA는 인터페이스만 작성하면 런타임 시점에 자바의 Dynamic Proxy를 이용해
+	객체를 동적으로 생성
+
+JPARepository
+	- 2개의 지네릭 타입을 사용 
+		ex) JpaRepository<BoardData, Long>
+		- 첫 번째는 엔티티 타입 클래스를 넣고, 두 번째는 기본키 타입을 넣어줌	
+	
+	- JpaRepository 에서 지원하는 메서드
+		- void delete(T entity) : 엔티티 삭제
+		- count() : 엔티티 총 개수 반환
+		- Iterable findAll() : 모든 엔티티 조회
+	
+RepositoryTest 설계 이유
+	- 개발을 하다보면 기획 요건이 변경 돼 코드를 수정하거나, 기존의 소스를 수정해야하는 상황 발생
+	- 로직이 복잡할 때 코드 수정 이후 버그 없이 제대로 동작하는지 테스트하는 것은 중요
+	- 테스트 코드도 유지보수를 해야 하기 때문에 비용이 발생
+		-> 의미있는 테스트 케이스를 작성하고 결과가 예상과 맞는지 검사하는 로직을 작성
+
+RepositoryTest 설계
+	- 테스트 환경을 위한 별도의 properties를 만듦 ( application-test.properties )
+		# Datasource 설정
+		spring.datasource.driver-class-name=org.h2.Driver
+		spring.datasource.url=jdbc:h2:mem:test
+		spring.datasource.username=sa
+		spring.datasource.password=
+
+		# H2 데이터베이스 방언 설정
+		spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+
+	- 테스트용 데이터베이스로 H2 데이터베이스 자주 사용
+
+	- 테스트 코드가 실행되면 콘솔창에서 실행되는 쿼리문을 볼 수 있음
+	
+
+	

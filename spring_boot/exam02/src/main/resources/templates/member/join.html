@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/main}">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <main layout:fragment="content">
+    <form method="post" th:action="@{/member/join}" th:object="${memberJoin}">
+      <div th:each="err : ${#fields.globalErrors()}" th:text="${err}"></div>
+      <dl>
+        <dt th:text="#{userId}"></dt>
+        <dd>
+          <input type="text" name="userId" th:field="*{userId}">
+          <div th:each="err : ${#fields.errors('userId')}" th:text="${err}"></div>
+        </dd>
+      </dl>
+
+      <dl>
+        <dt>비밀번호</dt>
+        <dd>
+          <input type="password" name="userPw" th:field="*{userPw}">
+          <div th:each="err : ${#fields.errors('userPw')}" th:text="${err}"></div>
+        </dd>
+      </dl>
+
+      <dl>
+        <dt>비밀번호 확인</dt>
+        <dd>
+          <input type="password" name="userPwRe" th:field="*{userPwRe}">
+          <div th:each="err : ${#fields.errors('userPwRe')}" th:text="${err}"></div>
+        </dd>
+      </dl>
+
+      <dl>
+        <dt>회원명</dt>
+        <dd>
+          <input type="text" name="userNm" th:field="*{userNm}">
+          <div th:each="err : ${#fields.errors('userNm')}" th:text="${err}"></div>
+        </dd>
+      </dl>
+
+      <dl>
+        <dt>이메일</dt>
+        <dd>
+          <input type="email" name="email" th:field="*{email}">
+          <div th:each="err : ${#fields.errors('email')}" th:text="${err}"></div>
+        </dd>
+      </dl>
+
+      <dl>
+        <dt>휴대전화</dt>
+        <dd>
+          <input type="text" name="mobile" th:field="*{mobile}">
+          <div th:each="err : ${#fields.errors('mobile')}" th:text="${err}"></div>
+        </dd>
+      </dl>
+
+      <!--
+      -->
+      <div>
+        <input type="checkbox" name="agree" value="true" th:field="*{agree}" id="agree">
+        <label for="agree">약관에 동의하세요</label>
+      </div>
+      <button type="submit">가입하기</button>
+    </form>
+  </main>
+</body>
+</html>

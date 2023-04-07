@@ -1,0 +1,48 @@
+Errors 인터페이스가 제공하는 에러 코드 추가 메서드
+	- reject(String errorCode)
+	- reject(String errorCode, String defaultMessage)
+	- reject(String errorCode, Object[] errorArgs, String defaultMessage)
+	- rejectValue(String field, String errorCode)
+	- rejectValue(String field, String errorCode, String defaultMessage)
+	- rejectValue(String field, String errorCode, Object[] errorArgs, String defaultMessage)
+
+	- 에러코드에 해당하는 메세지가 {0} 이나 {1} 같이 인덱스 기반 변수를 포함하고 있는 경우
+		Object 배열 타입의 errorArgs 파라미터를 이용해서 변수에 삽입될 값을 전달
+	
+	- defaultMessage 파라미터를 가진 메서드를 사용하면 에러 코드에 해당하는 메시지가 
+		존재하지 않을 때 익셈션을 발생시키는 대신 defaultMessage를 출력
+
+	- Errors에 에러 코드를 추가하면 JSP는 스프링이 제공하는 <form:errors> 태그를 사용해서 
+		에러에 해당하는 메세지를 출력할 수 있다.
+	
+	- 에러 메세지를 찾을 때에는 Messagesource를 사용하므로 에러 코드에 해당하는 메세지를
+		메세지 프로퍼티 파인에 추가해야 함
+	
+	- RegisterRequestValidator 클래스와 RegisterController 클래스에서 사용한 에러 코드에
+		맞는 메세지를 추가해야 함
+
+ValidationUtils 클래스가 제공하는 메서드
+	- rejectIfEmpty(Errors errors, String field, String errorCode)
+	- rejectIfEmpty(Errors errors, String field, String errorCode, Object[] errorArgs)
+	- rejectIfEmptyOrWhitespace(Errors errors, String field, String errorCode)
+	- rejectIfEmptyOrWhitespace(Errors errors, String field, String errorCode, Object[] errorArgs)
+	
+	- rejectIfEmpty() 메서드는 field에 해당하는 프로퍼티 값이 null이거나 빈 문자열(“”)인 경우
+		 에러 코드로 errorCode를 추가한다.
+
+	- rejectIfEmptyOrWhitespace() 메서드는 null이거나 빈 문자열인 경우 그리고 공백 문자(스페이스, 탭 등)
+		로만 값이 구성된 경우 에러코드를 추가한다.
+
+	- 에러 코드에 해당하는 메시지가 {0}이나 {1}과 같이 인덱스 기반 플레이스홀더를 포함하고 있으면
+		 errorArgs를 이용해서 메시지의 플레이스홀더에 삽입할 값을 전달한다.
+
+<form:errors> 태그의 주요 속성
+	- 프로퍼티에 추가한 에러코드 개수만큼 에러 메세지를 출력
+	
+	- element : 각 에러 메세지를 출력할 때 사용할 HTML 태그, 기본 값은 span이다.
+	- delimiter : 각 에러 메세지를 구분할 때 사용할 HTML태그, 기본 값은 <br/> 이다.
+		
+	- path 속성을 지정하지 않으면 글로벌 에러에 대한 메세지를 출력
+
+
+	

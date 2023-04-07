@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org"
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  layout:decorate="~{layouts/main}">
+
+<main layout:fragment="content">
+  <form method="post" th:action="@{/member/login}" autocomplete="off">
+    <div class="error" th:if="${success == 1}" th:text="#{loginFail}"></div>
+    <dl>
+      <dt th:text="#{userId}"></dt>
+      <dd>
+        <input type="text" name="userId">
+      </dd>
+    </dl>
+    <dl>
+      <dt th:text="#{userPw}"></dt>
+      <dd>
+        <input type="password" name="userPw">
+      </dd>
+    </dl>
+    <button type="submit" th:text="#{login}"></button>
+  </form>
+
+</main>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <th:block th:fragment="form" th:object="${boardConfig}">
+        <div class="error" th:each="err : ${#fields.globalErrors()}" th:text="${err}"></div>
+        <dl>
+            <dt>게시판 아이디</dt>
+            <dd>
+                <th:block th:if="${mode != null && mode == 'update'}">
+                    [[*{bId}]]
+                    <input type="hidden" name="bId" th:field="*{bId}">
+                </th:block>
+                <input th:unless="${mode != null && mode == 'update'}" type="text" name="bId" th:field="*{bId}">
+                <div class="error" th:each="err : ${#fields.errors('bId')}" th:text="${err}"></div>
+            </dd>
+        </dl>
+        <dl>
+            <dt>게시판 이름</dt>
+            <dd>
+                <input type="text" name="boardNm" th:field="*{boardNm}">
+                <div class="error" th:each="err : ${#fields.errors('boardNm')}" th:text="${err}"></div>
+            </dd>
+        </dl>
+        <dl>
+            <dt>게시판 분류</dt>
+            <dd>
+                <textarea name="category" th:field="*{category}" placeholder="분류가 여러개일때는 엔터키를 눌러서 입력하세요."></textarea>
+            </dd>
+        </dl>
+        <dl>
+            <dt>사용여부</dt>
+            <dd>
+                <input type="radio" name="use" value="true" id="use_1" checked th:field="*{use}">
+                <label for="use_1">사용</label>
+                <input type="radio" name="use" value="false" id="use_0" checked th:field="*{use}">
+                <label for="use_0">미사용</label>
+
+            </dd>
+        </dl>
+        <dl>
+            <dt>접근가능권한</dt>
+            <dd>
+                <input type="radio" name="accessLevel" value="ALL" id="accessLevel_ALL" th:field="*{accessLevel}">
+                <label for="accessLevel_ALL">비회원+회원+관리자</label>
+                <input type="radio" name="accessLevel" value="USER" id="accessLevel_USER" th:field="*{accessLevel}">
+                <label for="accessLevel_USER">회원+관리자</label>
+                <input type="radio" name="accessLevel" value="ADMIN" id="accessLevel_ADMIN" th:field="*{accessLevel}">
+                <label for="accessLevel_ADMIN">관리자</label>
+            </dd>
+        </dl>
+        <dl>
+            <dt>목록게시글 수</dt>
+            <dd>
+                <input type="number" name="noOfRows" th:field="*{noOfRows}">
+            </dd>
+        </dl>
+        <dl>
+            <dt>댓글 사용</dt>
+            <dd>
+                <input type="radio" name="comment" value="true" id="comment_1" th:field="*{comment}">
+                <label for="comment_1">사용</label>
+                <input type="radio" name="comment" value="false" id="comment_0" th:field="*{comment}">
+                <label for="comment_0">미사용</label>
+            </dd>
+        </dl>
+        <dl>
+            <dt>파일첨부</dt>
+            <dd>
+                <input type="checkbox" name="attachFileType" value="image" id="attachFileType_image" th:field="*{attachFileType}">
+                <label for="attachFileType_image">이미지</label>
+                <input type="checkbox" name="attachFileType" value="file" id="attachFileType_file" th:field="*{attachFileType}">
+                <label for="attachFileType_file">일반파일</label>
+            </dd>
+        </dl>
+        <dl>
+            <dt>에디터 사용</dt>
+            <dd>
+                <input type="radio" name="aditor" value="true" id="editor_1" checked th:field="*{editor}">
+                <label for="editor_1">사용</label>
+                <input type="radio" name="aditor" value="false" id="editor_0" th:field="*{editor}">
+                <label for="editor_0">미사용</label>
+            </dd>
+        </dl>
+    </th:block>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<body>
+    <th:block sec:authorize="isAuthenticated()">
+        [[${member.userNm}]]([[${member.userId}]])님 로그인...
+        <a th:href="@{/member/logout}">로그아웃</a>
+
+        <th:block sec:authorize="hasAuthority('ADMIN')">
+            <a th:href="@{/admin}">사이트 관리</a>
+        </th:block>
+
+    </th:block>
+    <th:block sec:authorize="isAnonymous()">
+        <a th:href="@{/member/join}">회원가입</a>
+        <a th:href="@{/member/login}">로그인</a>
+    </th:block>
+
+</body>
+</html>

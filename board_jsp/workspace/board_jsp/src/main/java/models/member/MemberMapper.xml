@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace='MemberMapper'>
+  <!-- 클래스 객체이름(id)와 클래스이름(type)을 명시 -->
+  		<resultMap id="memberMap" type="models.member.Member">
+  		<!-- sql과 연동 -->
+  			<result property="userNo" column="userNo"/>
+  			<result property="userId" column="userId"/>
+  			<result property="userNm" column="userNm"/>
+  			<result property="userPw" column="userPw"/>
+  			<result property="userPwRe" column="userPwRe"/>
+  			<result property="mobile" column="mobile"/>
+  			<result property="gender" column="gender"/>
+  			<result property="birthYY" column="birthYY"/>
+  			<result property="birthMM" column="birthMM"/>
+  			<result property="birthDD" column="birthDD"/>
+  			<result property="regDt" column="regDt"/>
+  			<result property="modDt" column="modDt"/>
+  		</resultMap>
+  <!-- 회원목록  userId,userNm, mobile => 유니크한 값들임 로 조회할 수 있음 -->
+  <select id="members" parameterType="models.member.Member" resultMap="memberMap">
+   	SELECT * FROM member
+   		<trim prefix="WHERE" suffixOverrides="AND|OR">
+   			<if test="userId != null">
+   				uerId=#{userId} AND
+   			</if>
+   			<if test="userNm != null">
+   				userNo LIKE #{userNm} AND
+   			</if>
+   			<if test="mobile != null">
+   				mobile LIKE #{mobile} AND
+   			</if>
+   		</trim>
+  </select>
+  
+  <!-- 회원 정보 (한 회원의 정보를 출력)-->
+  <select id="member" parameterType="models.member.Member" resultMap="memberMap">
+  	SELECT * FROM member WHERE userId=#{userId};
+  </select>
+  
+  <!-- 데이터수 (회원 수) 조회 -->
+  <select id="count" parameterType="models.member.Member" resultType="int">
+  	SELECT COUNT(*) FROM member WHERE userId=#{userId};
+  </select>
+  
+  <!-- 회원정보 등록 -->
+  <insert id="insert" parameterType="models.member.Member" keyProperty="userNo" useGeneratedKeys="true" >
+  	INSERT INTO member(userId,userNm,userPw,mobile,gender,birthYY,birthMM,birthDD)
+  		VALUES (#{userId},#{userNm},#{userPw},#{mobile},#{gender},#{birthYY},#{birthMM},#{birthDD});
+  </insert>
+  
+  <!-- 회원 정보 수정(userPw,userNm,mobile, birth..? -->
+  <update id="update" parameterType="models.member.Member" >
+  	UPDATE member
+  	<trim prefix="SET" suffixOverrides=",">
+  	<if test="userPw !=null">
+  		userPw=#{userPw},
+  	</if>
+	<if test="userNm !=null">
+		userNm=#{userNm},
+	</if>
+	<if test="mobile!=null">
+		mobile=#{mobile},	
+	</if>
+  	</trim>
+  	WHERE userId=#{userId};
+  </update>
+  
+  <!-- 회원 정보 삭제 -->
+  <delete id="delete">
+   DELETE FROM member WHERE userId=#{userId};
+  </delete>
+    </mapper>

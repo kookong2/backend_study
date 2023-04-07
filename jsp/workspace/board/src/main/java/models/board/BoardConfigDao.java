@@ -45,7 +45,6 @@ public class BoardConfigDao {
 	 * @return
 	 */
 	public boolean save(BoardConfig boardConfig) {
-		System.out.println(boardConfig);
 		int cnt = qe.queryOne(boardConfig, "BoardConfigMapper.count");
 		
 		int result = 0;

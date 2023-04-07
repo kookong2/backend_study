@@ -1,0 +1,127 @@
+@charset "EUC-KR";
+/* 초기화 */
+*{
+	padding : 0;
+	margin : 0;
+}
+
+
+
+/* 
+body{
+	
+	font-family : 'Gamja Flower', cursive;
+	 
+}
+ */
+
+li{
+	list-style : none;
+}
+a{
+	text-decoration : none;
+}
+button{
+	cursor : pointer;
+}
+
+
+/* 따로 설정 (회원가입, 로그인 둘 다 사용)*/
+.form-group{
+	margin : 50px 10px 0 10px;
+}
+input[type=text]{
+	width : 100%;
+	padding : 15px;
+	border : 1px solid #ddd;
+}
+input[type=password]{
+	width : 100%;
+	padding : 15px;
+	border : 1px solid #ddd;
+}
+.btn-group button{
+	float : left;
+	width : 50%;
+	padding : 15px;
+	border : 1px solid #000;
+}
+.btn-group::after{
+	content : "";
+	display : block;
+	clear : both;
+}
+.font-size-15{
+	font-size : 18px; font-weight:700;
+}
+.margin-top-25{
+	margin-top : 25px;
+}
+.margin-bottom-10{
+	margin-bottom : 10px;
+}
+select{
+	width : 130px;
+}
+
+
+/* 회원가입 */
+
+.joinbox{
+	/* 
+	padding-top : 50px;
+	 */
+	padding-bottom : 50px;
+	top : 0;
+	left : 0;
+	width : auto;
+	height : 100%;
+	/*  
+	background-color: rgb(220, 234, 250);
+	*/
+	}
+.join-content{
+	background-color : #fff;
+	
+	margin : 0 20%;
+	padding : 50px;
+	position : relative;
+	background-color: rgb(220, 234, 250);
+}
+.join-content h2{
+	width : 100%;
+	height : 80px;
+	line-height : 100px;
+	text-align : center;
+	font-size : 20px;
+	font-weight : normal;
+}
+
+
+.user-box {
+	height:15px;
+}
+
+
+.option_box {
+	height: 35px;
+}
+
+#birth_box{
+	
+	width:100%;
+}
+#birth_box select{
+	width : 28%;
+	padding : 15px;
+	border : 1px solid #ddd;
+}
+#birth_yy , #birth_mm , #birth_dd {
+	width:28%;
+	padding : 15px;
+	border : 1px solid #ddd;
+}
+
+#birth_yy+#birth_mm, #birth_mm+#birth_dd {
+	padding-left: 15px;
+}

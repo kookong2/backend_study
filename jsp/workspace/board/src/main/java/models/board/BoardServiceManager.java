@@ -26,7 +26,7 @@ public class BoardServiceManager {
 	}
 	
 	public BoardConfigInfoService getBoardConfigInfoService() {
-		return new BoardConfigInfoService(boardConfigDao(), null);
+		return new BoardConfigInfoService(boardConfigDao());
 	}
 	
 	public static BoardServiceManager getInstance() {

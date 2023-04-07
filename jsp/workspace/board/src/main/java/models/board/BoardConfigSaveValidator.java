@@ -10,7 +10,6 @@ public class BoardConfigSaveValidator implements Validator<BoardConfig>, Require
 		/**
 		 *  1. 필수 데이터 체크 - id, boardNm
 		 * 2. 기본값 부여, isUse 
-		 * 	  	attachFileType - basic
 		 *     postsPerPage - 20 
 		 *     pageRanges - 10
 		 *   
@@ -21,7 +20,6 @@ public class BoardConfigSaveValidator implements Validator<BoardConfig>, Require
 		checkRequired(boardConfig.getBoardNm(), new BoardConfigValidationException("게시판명을 입력하세요."));
 		
 		// 2. 기본값 부여
-		boardConfig.setAttachFileType(defaultValue(boardConfig.getAttachFileType(), "basic"));
 		int postsPerPage = boardConfig.getPostsPerPage();
 		int pageRanges = boardConfig.getPageRanges();
 		if (postsPerPage <= 0) boardConfig.setPostsPerPage(20);

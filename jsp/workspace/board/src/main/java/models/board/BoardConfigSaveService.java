@@ -20,7 +20,6 @@ public class BoardConfigSaveService {
 		/**
 		 * 1. 필수 데이터 체크 - id, boardNm
 		 * 2. 기본값 부여, isUse - 0, useEditor - 1,
-		 * 	  	attachFileType - basic
 		 *     postsPerPage - 20 
 		 *     pageRanges - 10
 		 *     useComment - 0

@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/admin}">
+    <section layout:fragment="content">
+        <nav th:replace="~{admin/board/_submenu::menus}"></nav>
+        <form class="form" method="post" th:action="@{/admin/board/save}" autocomplete="off">
+            <th:block th:replace="~{admin/board/_form::form}"></th:block>
+            <button type="submit" class="submit_btn">등록하기</button>
+        </form>
+    </section>
+</html>

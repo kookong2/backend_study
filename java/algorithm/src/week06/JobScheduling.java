@@ -3,6 +3,7 @@ package week06;
 import java.util.ArrayList;
 import java.util.Comparator;
 
+
 public class JobScheduling {
     public static void main(String[] args) {
         // 1. 문제 정의 (데이터 생성) -> 클래스 구현
@@ -36,7 +37,7 @@ public class JobScheduling {
             m.e = t.e;
             m.tasks.add(t);
         }
-
+        System.out.println("효과적인 일은..");
         System.out.println(M);
     }
 
@@ -81,10 +82,6 @@ class Machine {
 
     @Override
     public String toString() {
-        return "Machine{" +
-                "id=" + id +
-                ", e=" + e +
-                ", tasks=" + tasks +
-                '}';
+        return "스케쥴 {" + tasks + " }";
     }
 }

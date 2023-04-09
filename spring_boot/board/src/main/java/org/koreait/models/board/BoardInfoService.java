@@ -30,7 +30,7 @@ public class BoardInfoService {
 
         BoardConfig config = BoardConfig.builder()
                 .bId(board.getBId())
-                .boardName(board.getBoardNm())
+                .boardNm(board.getBoardNm())
                 .use(board.isUse())
                 .accessLevel(board.getAccessLevel().toString())
                 .attachFileType(fileType)

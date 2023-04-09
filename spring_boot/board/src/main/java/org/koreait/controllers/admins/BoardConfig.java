@@ -17,7 +17,7 @@ public class BoardConfig {
     private String bId;
 
     @NotBlank(message="게시판 이름을 입력하세요.")
-    private String boardName;
+    private String boardNm;
 
 
     private String category;

@@ -26,7 +26,7 @@ public class BoardSaveService {
             entity.setBId(bId);
         }
 
-        entity.setBoardNm(board.getBoardName());
+        entity.setBoardNm(board.getBoardNm());
         entity.setCategory(board.getCategory());
         entity.setUse(board.isUse());
         entity.setAccessLevel(AccessLevel.valueOf(board.getAccessLevel()));

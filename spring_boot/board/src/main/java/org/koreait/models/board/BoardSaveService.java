@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
 @Service
 @RequiredArgsConstructor
 public class BoardSaveService {
-    private BoardRepository repository;
+    private final BoardRepository repository;
 
     public void save(BoardConfig board){
         Board entity = null;

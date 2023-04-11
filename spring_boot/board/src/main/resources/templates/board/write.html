@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="~{layouts/main}">
+
+    <main layout:fragment="content">
+        <form method="post" th:action="@{/board/write}">
+            <th:block th:replace="~{board/_form::form}"></th:block>
+            <button type="submit" class="submit_btn" th:text="#{board.write}"></button>
+        </form>
+    </main>
+</html>

@@ -4,5 +4,34 @@
         layout:decorate="~{layouts/admin}" lang="ko">
     <section layout:fragment="content">
         <nav class="sub_menus" th:replace="~{admin/board/_submenu::menus}"></nav>
+        <form method="post" th:action="@{/admin/board}">
+            <table class="table_rows">
+                <thead>
+                    <tr>
+                        <th>
+                            <input type="checkbox" class="select_all" data-target-name="bId">
+                        </th>
+                        <th>게시판아이디</th>
+                        <th>게시판이름</th>
+                        <th>관리</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="config : ${configs}" th:object="${config}">
+                        <td>
+                            <input type="checkbox" name="bId" th:value="*{bId}">
+                        </td>
+                        <td>
+                            <a th:href="@{/admin/board/update/{id}(id=*{bId})}" th:text="*{bId}"></a>
+                        </td>
+                        <td th:text="*{boardNm}"></td>
+                        <td>
+                            <a th:href="@{/admin/board/update/{id}(id=*{bId})}" class="btn2">설정수정</a>
+                            <a th:href="@{/board/list/{id}(id=*{bId})}" target="_blank" class="btn2">게시글 목록</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
     </section>
 </html>

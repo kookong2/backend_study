@@ -7,6 +7,7 @@
     <form method="post" th:action="@{/admin/board/save}" autocomplete="off">
         <input type="hidden" name="mode" value="update">
         <th:block th:replace="~{admin/board/_form::form}"></th:block>
+        <button type="submit" class="submit_btn">수정하기</button>
     </form>
 </section>
 </html>

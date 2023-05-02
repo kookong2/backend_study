@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <th:block th:fragment="form" th:object="${boardData}">
+        <div class="error" th:each="err : ${#fields.globalErrors()}" th:text="${err}"></div>
+        <input type="hidden" name="bId" th:field="*{bId}">
+        <div class="error" th:each="err : ${#fields.errors('bId')}" th:text="${err}"></div>
+        <dl>
+            <dt th:text="#{board.poster}"></dt>
+            <dd>
+                <input type="text" name="poster" th:field="*{poster}">
+                <div class="error" th:each="err : ${#fields.errors('poster')}" th:text="${err}"></div>
+            </dd>
+        </dl>
+        <dl>
+            <dt th:text="#{board.subject}"></dt>
+            <dd>
+                <input type="text" name="subject" th:field="*{subject}">
+                <div class="error" th:each="err : ${#fields.errors('subject')}" th:text="${err}"></div>
+            </dd>
+        </dl>
+        <dl>
+            <dt th:text="#{board.content}"></dt>
+            <dd>
+                <textarea name="content" id="content" th:field="*{content}"></textarea>
+                <div class="error" th:each="err : ${#fields.errors('content')}" th:text="${err}"></div>
+            </dd>
+        </dl>
+        <dl>
+            <dt></dt>
+            <dd>
+                <input type="file" id="file" class="dn" multiple>
+                <button class="fileUpload" type="button" th:text="#{board.upload.image}" data-type="image"></button>
+                <button class="fileUpload" type="button" th:text="#{board.upload.file}" data-type="file"></button>
+            </dd>
+        </dl>
+    </th:block>
+</html>

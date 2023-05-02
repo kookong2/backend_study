@@ -6,12 +6,14 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Service;
 import org.study.entities.User;
 import org.study.repositories.UserRepository;
 
 import java.util.Arrays;
 import java.util.List;
 
+@Service
 public class UserInfoService implements UserDetailsService {
 
     @Autowired
@@ -19,21 +21,22 @@ public class UserInfoService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        User user = repository.findByUserId(username);
-        if (user == null) {
+        User member = repository.findByUserEmail(username);
+
+        if (member == null) {
             throw new UsernameNotFoundException(username);
         }
         
         // 사용자 권한 
-        List<GrantedAuthority> authorities = Arrays.asList(new SimpleGrantedAuthority(user.getRole().toString()));
+        List<GrantedAuthority> authorities = Arrays.asList(new SimpleGrantedAuthority(member.getRole().toString()));
 
         return UserInfo.builder()
-                .userNo(user.getUserNo())
-                .userId(user.getUserId())
-                .userNm(user.getUserNm())
-                .userPw(user.getUserPw())
-                .email(user.getEmail())
-                .cellPhone(user.getCellPhone())
+                .userNo(member.getUserNo())
+                .userEmail(member.getUserEmail())
+                .userNm(member.getUserNm())
+                .userNickNm(member.getUserNickNm())
+                .userPw(member.getUserPw())
+                .cellPhone(member.getCellPhone())
                 .authorities(authorities) // 사용자 권한 설정
                 .build();
     }

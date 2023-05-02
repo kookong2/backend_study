@@ -18,9 +18,10 @@ import java.util.Collection;
 public class UserInfo implements UserDetails {
 
     private Long userNo;
-    private String userId;
+    private String userEmail;
     private String userPw;
     private String userNm;
+    private String userNickNm;
     private String email;
     private String cellPhone;
 
@@ -38,7 +39,7 @@ public class UserInfo implements UserDetails {
 
     @Override
     public String getUsername() {
-        return userId;
+        return userEmail;
     }
 
     @Override

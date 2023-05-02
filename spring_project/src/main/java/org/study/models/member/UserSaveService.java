@@ -5,7 +5,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-import org.study.controllers.users.UserJoin;
+import org.study.controllers.user.UserJoin;
 import org.study.entities.User;
 import org.study.repositories.UserRepository;
 
@@ -25,8 +25,9 @@ public class UserSaveService {
             UserInfo userInfo = (UserInfo)auth.getPrincipal();
             user = repository.findById(userInfo.getUserNo()).orElse(UserJoin.of(userJoin));
             user.setUserNm(userJoin.getUserNm());
-            user.setEmail(userJoin.getEmail());
-            user.setCellPhone(userJoin.getCellPhone());
+            user.setUserEmail(userJoin.getUserEmail());
+            user.setUserNickNm(userJoin.getUserNickNm());
+            user.setCellPhone(userJoin.getCellphone());
         } else { // 회원 정보 추가
             user = UserJoin.of(userJoin);
         }

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d059eabb-b81a-413f-adc2-415f243bf6ce" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../java/comalgorithm/src/LastExam/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/comalgorithm/src/LastExam/Main2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/comalgorithm/src/week12/BacktrackTSP.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/comalgorithm/src/week13/GeneticAlgorithm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/comalgorithm/src/week14/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/comalgorithm/src/week14/Main2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/comalgorithm/src/week14/Main3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../spring_boot/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../spring_boot/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../spring_boot/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../spring_boot/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../spring_boot/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../spring_boot/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../spring_boot/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/algorithm/.classpath" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/algorithm/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/algorithm/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/algorithm/.settings/org.eclipse.core.resources.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/algorithm/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/algorithm/src/homework/MeetingRoomAssignment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/algorithm/src/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/algorithm/src/week03/MargeSortEx.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/algorithm/src/week04/QuickSort.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/algorithm/src/week04/SelectionAlgorithm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/algorithm/src/week05/Change.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/algorithm/src/week05/KruskalMST.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/algorithm/src/week06/Bag.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/algorithm/src/week06/CityPlanning.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/algorithm/src/week06/JobScheduling.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="2S8q2orO53VwUlKGw2ZnahgnnnV" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/a82107/Desktop/backend_study/jsp/workspace",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d059eabb-b81a-413f-adc2-415f243bf6ce" name="Changes" comment="" />
+      <created>1688538351562</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1688538351562</updated>
+      <workItem from="1688538355037" duration="60000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

@@ -1,4 +1,4 @@
-package date_time_formating;
+package DateTimeFormat;
 
 import java.util.Calendar;
 
